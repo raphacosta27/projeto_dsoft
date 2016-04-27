@@ -4,7 +4,7 @@
 
 ##B -> i3 (Integrar Ideais e Individuos)
 
-####Inicialmente a pessoa se cadastra no app (para isso utilizaremos o Firebase, que salvará os dados em forma de dicionarios que podem ser acessados e adicionados atraves de comandos definidos no python-firebase), após se cadastrar a pessoa é redirecionada a página com as funções do app. (4 botões que acessam cada uma das funções)
+Inicialmente a pessoa se cadastra no app (para isso utilizaremos o Firebase, que salvará os dados em forma de dicionarios que podem ser acessados e adicionados atraves de comandos definidos no python-firebase), após se cadastrar a pessoa é redirecionada a página com as funções do app. (4 botões que acessam cada uma das funções)
 
 ###O aplicativo terá incialmente 4 funções (?):
 - Calendário de eventos, datas importantes.
