@@ -7,14 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>759</width>
-    <height>586</height>
+    <height>587</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="boas_vindas">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -32,7 +32,7 @@
      <string>Bem-Vindo ao Integrator !</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="pergunta">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -50,7 +50,7 @@
      <string>O que você deseja acessar ?</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="descr_janela">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -68,7 +68,7 @@
      <string>Aqui você pode acessar diversos serviços para que sua vida na sala seja muito mais prática e rápida.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="botao_integrantes">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -81,7 +81,7 @@
      <string>Integrantes da sala</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="descr_integrantes">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -94,7 +94,7 @@
      <string>Aqui você confere os perfis de cada integrante da sala, desde que ele esteja cadastrado no nosso aplicativo.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="botao_servicos">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -107,7 +107,7 @@
      <string>Serviços próximos ao Insper</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="botao_aulas">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -120,7 +120,7 @@
      <string>Aulas da semana</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushBubotao_calendariotton_4">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -133,7 +133,7 @@
      <string>Calendário de tarefas</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit">
+   <widget class="QDateEdit" name="data_hoje">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -161,7 +161,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="descr_calendario">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -174,7 +174,7 @@
      <string>Hoje é dia </string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="descr_calendario2">
     <property name="geometry">
      <rect>
       <x>370</x>
@@ -187,7 +187,7 @@
      <string>segundo nossos servidores. Veja aqui o que está pendente na semana.</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="descr_aulas">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -200,7 +200,7 @@
      <string>Qual a sua próxima aula ? Boa pergunta ! Confira aqui o calendario das aulas da semana toda.</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="descr_servicos">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -210,7 +210,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Qual a sua próxima aula ? Boa pergunta ! Confira aqui o calendario das aulas da semana toda.</string>
+     <string>Não sabe onde comer ? Nem onde sacar dinheiro ? Confira aqui algumas dicas recomendadas pelo Integrator.</string>
     </property>
    </widget>
   </widget>
