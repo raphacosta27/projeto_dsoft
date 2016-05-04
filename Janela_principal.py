@@ -9,6 +9,7 @@
 from PyQt4 import QtCore, QtGui
 import sys
 from final import Ui_Form
+from perfildosalunos import Serviços
 
 class Ui_MainWindow(QtGui.QMainWindow):
     def __init__(self):
@@ -109,6 +110,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
         
         self.botao_servicos.clicked.connect(self.ServicosClicked)
         
+        self.botao_integrantes.clicked.connect(self.PerfilCLicked)
+        
         self.retranslateUi(self)
         QtCore.QMetaObject.connectSlotsByName(self)
 
@@ -132,8 +135,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.servicos = Ui_Form()
         self.servicos.show()
     
-    
-    
+    def PerfilCLicked (self): 
+        self.perfis = Serviços()
+        self.perfis.show()
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     mainwindow = Ui_MainWindow()

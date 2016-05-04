@@ -43,6 +43,8 @@ class DialogTest(QtGui.QDialog):
         self.buttonBox.setGeometry(QtCore.QRect(90, 110, 156, 23))
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.rejected.connect(self.CancelClicked)
+        self.buttonBox.accepted.connect(self.getuser)
+        self.buttonBox.accepted.connect(self.getpassword)
         self.buttonBox.accepted.connect(self.OKClicked)
         self.buttonBox.setObjectName("buttonBox")
         self.pushButton = QtGui.QPushButton(self.groupBox)
@@ -72,7 +74,12 @@ class DialogTest(QtGui.QDialog):
     def OKClicked(self):
         self.janela = Ui_MainWindow()
         self.janela.show()
-        
+    def getuser (self):
+        user = self.lineEdit.text()
+        print(user)
+    def getpassword (self):
+        password = self.lineEdit_2.text()
+        print(password)
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     dialogtest = DialogTest()
