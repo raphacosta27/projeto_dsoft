@@ -7,6 +7,8 @@ import sys
 from PyQt4 import QtGui, QtCore
 from NovoUsuario import Ui_Dialog
 from Janela_principal import Ui_MainWindow
+from firebase import firebase
+
 
 class DialogTest(QtGui.QDialog):
     def __init__(self):
@@ -77,9 +79,23 @@ class DialogTest(QtGui.QDialog):
         elif not senha:
             QtGui.QMessageBox.warning(self, "Erro de validação", "Senha faltando!")
         else:
-            return 0
-            #função que verififca os dados no firebase
-        
+            self.tentativalogin(usuario, senha)
+
+    def tentativalogin(self, usuario, senha):
+        firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebase.com")
+        user_count = firebase.get("/userCount", "/count")
+        for i in range (user_count):
+            x = firebase.get("/users", "/00{0}".format(i))
+            y = firebase.get("/users", "/0{0}".format(i))
+            if usuario == x["name"]:
+                if senha == x["password"]:
+                    self.OKClicked.connect(self.Janela_principal)
+                else:
+                    QtGui.QMessageBox.warning(self, "Erro de validação", "Senha ou usuário errados!")
+
+
+# firebase.get("1","2") #Pegar do dicionario 2, dentro do dicionario 1
+# firebase.put("2", name="name", data="data") #Adicionar no dicionario, a chave name como valor data
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
