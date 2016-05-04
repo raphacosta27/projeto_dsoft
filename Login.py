@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 29 09:05:49 2016
-
-@author: Matheus
 """
 
 import sys

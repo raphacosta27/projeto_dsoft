@@ -154,6 +154,8 @@ class Ui_Dialog(QtGui.QDialog):
         self.lineEdit_11.setGeometry(QtCore.QRect(480, 450, 113, 20))
         self.lineEdit_11.setEchoMode(QtGui.QLineEdit.Password)
         self.lineEdit_11.setObjectName("lineEdit_11")
+        self.buttonBox.rejected.connect(self.CancelClicked)
+        
 
         self.retranslateUi(self)
         QtCore.QMetaObject.connectSlotsByName(self)
@@ -190,7 +192,8 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_13.setText(_translate("Dialog", "Login:"))
         self.label_14.setText(_translate("Dialog", "Senha:"))
         self.label_15.setText(_translate("Dialog", "Confirme sua senha:"))
-
+    def CancelClicked (self):
+        self.close()
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     novousuario = Ui_Dialog()
