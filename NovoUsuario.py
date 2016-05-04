@@ -7,7 +7,10 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
+from firebase import firebase 
 import sys
+
+firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 
 class Ui_Dialog(QtGui.QDialog):
     def __init__(self):
@@ -15,7 +18,7 @@ class Ui_Dialog(QtGui.QDialog):
     
         
         self.setupUi()
-        
+       
     def setupUi(self):
         self.setObjectName("Dialog")
         self.setEnabled(True)
@@ -192,8 +195,23 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_13.setText(_translate("Dialog", "Login:"))
         self.label_14.setText(_translate("Dialog", "Senha:"))
         self.label_15.setText(_translate("Dialog", "Confirme sua senha:"))
+        self.buttonBox.accepted.connect(self.NovoUser)
+    
     def CancelClicked (self):
         self.close()
+        
+        
+    def NovoUser(self):
+        new_user = str(self.lineEdit_9.text())
+        new_password = str(self.lineEdit_10.text())
+        user_count = firebase.get("/userCount", "/count")
+        firebase.put("/users/00{0}".format(user_count), name = "name", data = new_user)
+        firebase.put("/users/00{0}".format(user_count), name = "password", data = new_password)
+        user_count += 1
+        firebase.put("/userCount",name = "count", data = user_count)
+        self.close()
+        
+        
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     novousuario = Ui_Dialog()
