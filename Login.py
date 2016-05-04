@@ -70,9 +70,17 @@ class DialogTest(QtGui.QDialog):
         self.close()
         
     def OKClicked(self):
-        self.janela = Ui_MainWindow()
-        self.janela.show()
+        usuario = self.lineEdit.text()
+        senha = self.lineEdit_2.text()
+        if not usuario:
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Nome de usuário faltando!")
+        elif not senha:
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Senha faltando!")
+        else:
+            return 0
+            #função que verififca os dados no firebase
         
+
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     dialogtest = DialogTest()
