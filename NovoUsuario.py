@@ -9,6 +9,8 @@
 from PyQt4 import QtCore, QtGui
 from firebase import firebase 
 import sys
+from perfildosalunos import Serviços
+
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 
@@ -16,14 +18,14 @@ class Ui_Dialog(QtGui.QDialog):
     def __init__(self):
         super(Ui_Dialog, self).__init__()
     
-        
+        self.perfil = Serviços()
         self.setupUi()
        
     def setupUi(self):
         self.setObjectName("Dialog")
         self.setEnabled(True)
         self.resize(784, 574)
-        self.setMouseTracking(True)
+        self.setMouseTracking(True) 
         self.setFocusPolicy(QtCore.Qt.NoFocus)
         self.setAutoFillBackground(False)
         self.setSizeGripEnabled(False)
@@ -204,9 +206,32 @@ class Ui_Dialog(QtGui.QDialog):
     def NovoUser(self):
         new_user = str(self.lineEdit_9.text())
         new_password = str(self.lineEdit_10.text())
+        
+        nome = self.lineEdit.text()
+        idade = self.lineEdit_2.text()
+        email = self.lineEdit_4.text()
+        telefone = self.lineEdit_3.text()
+        
+        facebook = self.lineEdit_5.text()
+        snapchat = self.lineEdit_6.text()
+        instagram = self.lineEdit_7.text()
+        add_information = self.lineEdit_8
+        
         user_count = firebase.get("/userCount", "/count")
         firebase.put("/users/00{0}".format(user_count), name = "name", data = new_user)
         firebase.put("/users/00{0}".format(user_count), name = "password", data = new_password)
+        
+        firebase.put("/users/00{0}".format(user_count), name = "nome", data = nome)
+        firebase.put("/users/00{0}".format(user_count), name = "idade", data = idade)
+        firebase.put("/users/00{0}".format(user_count), name = "email", data = email)
+        firebase.put("/users/00{0}".format(user_count), name = "telefone", data = telefone)
+        firebase.put("/users/00{0}".format(user_count), name = "facebook", data = facebook)
+        firebase.put("/users/00{0}".format(user_count), name = "snapchat", data = snapchat)
+        firebase.put("/users/00{0}".format(user_count), name = "instagram", data = instagram)
+        firebase.put("/users/00{0}".format(user_count), name = "add_information", data = add_information)
+        
+        
+        
         user_count += 1
         firebase.put("/userCount",name = "count", data = user_count)
         self.close()

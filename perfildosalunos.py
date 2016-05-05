@@ -42,6 +42,10 @@ class Serviços (QtGui.QWidget):
         self.treeWidget.headerItem().setText(4, _translate("Form", "Entidades"))
         self.treeWidget.headerItem().setText(5, _translate("Form", "Facebook"))
         self.treeWidget.headerItem().setText(6, _translate("Form", "Snapchat"))
+        self.treeWidget.headerItem().setText(6, _translate("Form", "Instagram"))
+        
+        
+        
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

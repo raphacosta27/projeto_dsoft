@@ -89,7 +89,6 @@ class DialogTest(QtGui.QDialog):
         user_count = firebase.get("/userCount", "/count")
         for i in range (user_count + 1):
             x = firebase.get("/users", "/00{0}".format(i))
-            print(x)
             if user == x["name"]:
                 if password == x["password"]:                                       
                     self.buttonBox.accepted.connect(self.OKClicked)
