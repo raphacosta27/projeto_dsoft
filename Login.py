@@ -65,8 +65,6 @@ class DialogTest(QtGui.QDialog):
         self.label.setText(_translate("Dialog", "Login"))
         self.label_2.setText(_translate("Dialog", "Senha"))
         self.pushButton.setText(_translate("Dialog", "Novo Usuário"))
-
-    
         
     def getuser (self):
         user = self.lineEdit.text()

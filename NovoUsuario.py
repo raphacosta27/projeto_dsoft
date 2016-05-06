@@ -216,24 +216,23 @@ class Ui_Dialog(QtGui.QDialog):
         snapchat = self.lineEdit_6.text()
         instagram = self.lineEdit_7.text()
         add_information = self.lineEdit_8
-        
+        user = {}
+
         user_count = firebase.get("/userCount", "/count")
-        firebase.put("/users/00{0}".format(user_count), name = "name", data = new_user)
-        firebase.put("/users/00{0}".format(user_count), name = "password", data = new_password)
-        
-        firebase.put("/users/00{0}".format(user_count), name = "nome", data = nome)
-        firebase.put("/users/00{0}".format(user_count), name = "idade", data = idade)
-        firebase.put("/users/00{0}".format(user_count), name = "email", data = email)
-        firebase.put("/users/00{0}".format(user_count), name = "telefone", data = telefone)
-        firebase.put("/users/00{0}".format(user_count), name = "facebook", data = facebook)
-        firebase.put("/users/00{0}".format(user_count), name = "snapchat", data = snapchat)
-        firebase.put("/users/00{0}".format(user_count), name = "instagram", data = instagram)
-        firebase.put("/users/00{0}".format(user_count), name = "add_information", data = add_information)
-        
-        
-        
         user_count += 1
         firebase.put("/userCount",name = "count", data = user_count)
+
+        firebase.put("/users/{0:03d}".format(user_count), name = "name", data = new_user)
+        firebase.put("/users/{0:03d}".format(user_count), name = "password", data = new_password)
+        firebase.put("/users/{0:03d}".format(user_count), name = "nome", data = nome)
+        firebase.put("/users/{0:03d}".format(user_count), name = "idade", data = idade)
+        firebase.put("/users/{0:03d}".format(user_count), name = "email", data = email)
+        firebase.put("/users/{0:03d}".format(user_count), name = "telefone", data = telefone)
+        firebase.put("/users/{0:03d}".format(user_count), name = "facebook", data = facebook)
+        firebase.put("/users/{0:03d}".format(user_count), name = "snapchat", data = snapchat)
+        firebase.put("/users/{0:03d}".format(user_count), name = "instagram", data = instagram)
+        firebase.put("/users/{0:03d}".format(user_count), name = "add_information", data = add_information)
+        
         self.close()
         
         
