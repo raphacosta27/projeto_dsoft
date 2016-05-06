@@ -204,8 +204,8 @@ class Ui_Dialog(QtGui.QDialog):
         
         
     def NovoUser(self):
-        new_user = str(self.lineEdit_9.text())
-        new_password = str(self.lineEdit_10.text())
+        new_user = self.lineEdit_9.text()
+        new_password = self.lineEdit_10.text()
         
         nome = self.lineEdit.text()
         idade = self.lineEdit_2.text()
@@ -215,23 +215,14 @@ class Ui_Dialog(QtGui.QDialog):
         facebook = self.lineEdit_5.text()
         snapchat = self.lineEdit_6.text()
         instagram = self.lineEdit_7.text()
-        add_information = self.lineEdit_8
-        user = {}
+        add_information = self.lineEdit_8.text()
 
         user_count = firebase.get("/userCount", "/count")
         user_count += 1
         firebase.put("/userCount",name = "count", data = user_count)
 
-        firebase.put("/users/{0:03d}".format(user_count), name = "name", data = new_user)
-        firebase.put("/users/{0:03d}".format(user_count), name = "password", data = new_password)
-        firebase.put("/users/{0:03d}".format(user_count), name = "nome", data = nome)
-        firebase.put("/users/{0:03d}".format(user_count), name = "idade", data = idade)
-        firebase.put("/users/{0:03d}".format(user_count), name = "email", data = email)
-        firebase.put("/users/{0:03d}".format(user_count), name = "telefone", data = telefone)
-        firebase.put("/users/{0:03d}".format(user_count), name = "facebook", data = facebook)
-        firebase.put("/users/{0:03d}".format(user_count), name = "snapchat", data = snapchat)
-        firebase.put("/users/{0:03d}".format(user_count), name = "instagram", data = instagram)
-        firebase.put("/users/{0:03d}".format(user_count), name = "add_information", data = add_information)
+        firebase.put("/users/", name = new_user, data = {'name' : new_user, 'password' : new_password, 'nome': nome, 'idade': idade, 'email' : email, 'telefone' : telefone,
+        'facebook': facebook, 'snapchat': snapchat, 'instagram': instagram, 'adicional': add_information})
         
         self.close()
         
