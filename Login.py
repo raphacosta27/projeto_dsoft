@@ -73,28 +73,18 @@ class DialogTest(QtGui.QDialog):
     def tentativalogin (self):
         user = self.lineEdit.text()
         password = str(self.lineEdit_2.text())
-        user_count = firebase.get("/userCount","/count")
-#        for i in range(user_count + 1):
-#            if user 
-        dicionario = firebase.get("/users", "/{0}".format(user))
-         
-        for informacao in dicionario:
-            if user == dicionario["name"]:
-                if password == dicionario["password"]:
-                    self.buttonBox.accepted.connect(self.OKClicked)
-                else:
-                    if user != dicionario["name"]:
-                        QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
-#                    else: 
-#                        QtGui.QMessageBox.warning(self, "Erro de validação", "Usuário Inválido")
-#            elif password != dicionario["password"]:
-#                QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
-#            else:
-#                QtGui.QMessageBox.warning(self, "Erro de validação", "Usuário Inválido")
+        dicionario = firebase.get("/users", "/{0}".format(user))        
+        try: 
+           user == dicionario["name"]
+           if password == dicionario["password"]:
+              self.buttonBox.accepted.connect(self.OKClicked)
 
-#                    QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")                    
-#            else:
-#                QtGui.QMessageBox.warning(self, "Erro de validação", "Usuário Inválido")
+           else:
+              QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
+        except TypeError:
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
+                  
+              
                 
     def NovoUsuarioClicked(self):   
         self.window =  Ui_Dialog()
