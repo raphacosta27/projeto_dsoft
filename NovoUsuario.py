@@ -19,6 +19,8 @@ class Ui_Dialog(QtGui.QDialog):
     
 
         self.setupUi()
+        
+        self.perfilnovoaluno = JanelaPerfil()
     def setupUi(self):
         self.setObjectName("Dialog")
         self.setEnabled(True)
@@ -202,6 +204,7 @@ class Ui_Dialog(QtGui.QDialog):
         
         
     def NovoUser(self):
+        
         self.new_user = self.lineEdit_9.text()
         self.new_password = self.lineEdit_10.text()
         
@@ -221,6 +224,8 @@ class Ui_Dialog(QtGui.QDialog):
 
         firebase.put("/users/", name = self.new_user, data = {'name' : self.new_user, 'password' : self.new_password, 'nome': self.nome, 'idade': self.idade, 'email' : self.email, 'telefone' : self.telefone,
         'facebook': self.facebook, 'snapchat': self.snapchat, 'instagram': self.instagram, 'adicional': self.add_information})
+        
+        
         
     
         
