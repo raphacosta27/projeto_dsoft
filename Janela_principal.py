@@ -9,7 +9,7 @@
 from PyQt4 import QtCore, QtGui
 import sys
 from final import Ui_Form
-from perfildosalunos import Serviços
+from perfildosalunos import JanelaPerfil
 
 class Ui_MainWindow(QtGui.QMainWindow):
     def __init__(self):
@@ -136,7 +136,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.servicos.show()
     
     def PerfilCLicked (self): 
-        self.perfis = Serviços()
+        self.perfis = JanelaPerfil()
         self.perfis.show()
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

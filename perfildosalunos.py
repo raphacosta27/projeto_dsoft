@@ -7,13 +7,16 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
+
 import sys
 
-class Serviços (QtGui.QWidget):
+class JanelaPerfil (QtGui.QWidget):
     def __init__ (self):
-        super(Serviços, self).__init__()
+        super(JanelaPerfil, self).__init__()
         
         self.setupUi()
+        
+
         
     def setupUi(self):
         self.setObjectName("Form")
@@ -32,23 +35,35 @@ class Serviços (QtGui.QWidget):
         QtCore.QMetaObject.connectSlotsByName(self)
 
     def retranslateUi(self):
-        _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "Perfil dos alunos"))
-        self.treeWidget.headerItem().setText(0, _translate("Form", "Nome"))
-        self.treeWidget.headerItem().setText(1, _translate("Form", "Idade"))
-        self.treeWidget.headerItem().setText(2, _translate("Form", "Telefone"))
-        self.treeWidget.headerItem().setText(3, _translate("Form", "Email"))
-        self.treeWidget.headerItem().setText(4, _translate("Form", "Entidades"))
-        self.treeWidget.headerItem().setText(5, _translate("Form", "Facebook"))
-        self.treeWidget.headerItem().setText(6, _translate("Form", "Snapchat"))
-        self.treeWidget.headerItem().setText(6, _translate("Form", "Instagram"))
+        self.treeWidget = QtGui.QTreeWidget(self)
+        self.treeWidget.setHeaderHidden(True)
+        self.treeWidget.move(20,60)
+        self.treeWidget.resize(700,400)
+        
+#        self.item = QtGui.QTreeWidgetItem(["hello world"])
+#        self.item.addChild(QtGui.QTreeWidgetItem(["Hello"]))
+#        
+#        self.treeWidget.addTopLevelItem(self.item)
+
+
         
         
+#        _translate = QtCore.QCoreApplication.translate
+#        self.setWindowTitle(_translate("Form", "Form"))
+#        self.label.setText(_translate("Form", "Perfil dos alunos"))
+#        self.treeWidget.headerItem().setText(0, _translate("Form", "Nome"))
+#        self.treeWidget.headerItem().setText(1, _translate("Form", "Idade"))
+#        self.treeWidget.headerItem().setText(2, _translate("Form", "Telefone"))
+#        self.treeWidget.headerItem().setText(3, _translate("Form", "Email"))
+#        self.treeWidget.headerItem().setText(4, _translate("Form", "Entidades"))
+#        self.treeWidget.headerItem().setText(5, _translate("Form", "Facebook"))
+#        self.treeWidget.headerItem().setText(6, _translate("Form", "Snapchat"))
+#        self.treeWidget.headerItem().setText(7, _translate("Form", "Instagram"))
+#        
         
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    perfil = Serviços()
+    perfil = JanelaPerfil()
     perfil.show()
     sys.exit(app.exec_())
