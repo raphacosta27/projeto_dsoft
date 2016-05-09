@@ -45,7 +45,6 @@ class JanelaPerfil (QtGui.QWidget):
 #        
 #        self.treeWidget.addTopLevelItem(self.item)
 
-
         
         
 #        _translate = QtCore.QCoreApplication.translate
