@@ -6,13 +6,13 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui, QtGui
+from PyQt4 import QtCore, QtGui
 import sys
 
 
-class Ui_MainWindow(QtGui.QMainWindow):
+class Ui_Calendario(QtGui.QMainWindow):
     def __init__(self):
-        super(Ui_MainWindow, self).__init__()
+        super(Ui_Calendario, self).__init__()
         
         self.setupUi()
     def setupUi(self):
@@ -1509,6 +1509,6 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    mainwindow = Ui_MainWindow()
+    mainwindow = Ui_Calendario()
     mainwindow.show()
     sys.exit(app.exec_())

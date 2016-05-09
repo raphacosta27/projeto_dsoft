@@ -204,6 +204,8 @@ class Ui_Dialog(QtGui.QDialog):
         
         
     def NovoUser(self):
+                
+        
         
         self.new_user = self.lineEdit_9.text()
         self.new_password = self.lineEdit_10.text()

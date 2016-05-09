@@ -10,7 +10,7 @@ from PyQt4 import QtCore, QtGui
 import sys
 from final import Ui_Form
 from perfildosalunos import JanelaPerfil
-from Calendario_final import Calendario
+from Calendario import Ui_Calendario
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
@@ -143,7 +143,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.perfis = JanelaPerfil()
         self.perfis.show()
     def CalendarioClicked(self):
-        self.calendario = Calendario()
+        self.calendario = Ui_Calendario()
         self.calendario.show()
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
