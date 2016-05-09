@@ -9,8 +9,7 @@
 from PyQt4 import QtCore, QtGui
 from firebase import firebase 
 import sys
-from perfildosalunos import Serviços
-
+from perfildosalunos import JanelaPerfil
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 
@@ -18,9 +17,8 @@ class Ui_Dialog(QtGui.QDialog):
     def __init__(self):
         super(Ui_Dialog, self).__init__()
     
-        self.perfil = Serviços()
+
         self.setupUi()
-       
     def setupUi(self):
         self.setObjectName("Dialog")
         self.setEnabled(True)
@@ -204,25 +202,27 @@ class Ui_Dialog(QtGui.QDialog):
         
         
     def NovoUser(self):
-        new_user = self.lineEdit_9.text()
-        new_password = self.lineEdit_10.text()
+        self.new_user = self.lineEdit_9.text()
+        self.new_password = self.lineEdit_10.text()
         
-        nome = self.lineEdit.text()
-        idade = self.lineEdit_2.text()
-        email = self.lineEdit_4.text()
-        telefone = self.lineEdit_3.text()
+        self.nome = self.lineEdit.text()
+        self.idade = self.lineEdit_2.text()
+        self.email = self.lineEdit_4.text()
+        self.telefone = self.lineEdit_3.text()
         
-        facebook = self.lineEdit_5.text()
-        snapchat = self.lineEdit_6.text()
-        instagram = self.lineEdit_7.text()
-        add_information = self.lineEdit_8.text()
+        self.facebook = self.lineEdit_5.text()
+        self.snapchat = self.lineEdit_6.text()
+        self.instagram = self.lineEdit_7.text()
+        self.add_information = self.lineEdit_8.text()
 
         user_count = firebase.get("/userCount", "/count")
         user_count += 1
         firebase.put("/userCount",name = "count", data = user_count)
 
-        firebase.put("/users/", name = new_user, data = {'name' : new_user, 'password' : new_password, 'nome': nome, 'idade': idade, 'email' : email, 'telefone' : telefone,
-        'facebook': facebook, 'snapchat': snapchat, 'instagram': instagram, 'adicional': add_information})
+        firebase.put("/users/", name = self.new_user, data = {'name' : self.new_user, 'password' : self.new_password, 'nome': self.nome, 'idade': self.idade, 'email' : self.email, 'telefone' : self.telefone,
+        'facebook': self.facebook, 'snapchat': self.snapchat, 'instagram': self.instagram, 'adicional': self.add_information})
+        
+    
         
         self.close()
         
