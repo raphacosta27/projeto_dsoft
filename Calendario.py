@@ -37,6 +37,8 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_TituloJanela.setAlignment(QtCore.Qt.AlignCenter)
         self.Label_TituloJanela.setObjectName("Label_TituloJanela")
         self.verticalLayout.addWidget(self.Label_TituloJanela)
+
+#---------------- Checkbox para editar a janela -----------------#        
         self.Lay_Editar_Aulas = QtGui.QHBoxLayout()
         self.Lay_Editar_Aulas.setObjectName("Lay_Editar_Aulas")
         spacerItem = QtGui.QSpacerItem(1143, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -57,6 +59,8 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.checkbox_editarHora.setObjectName("checkbox_editarHora")
         self.Lay_Editar_Horarios.addWidget(self.checkbox_editarHora)
         self.verticalLayout.addLayout(self.Lay_Editar_Horarios)
+#-----------------------------------------------------------------#   
+
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.Grade_horario = QtGui.QGridLayout()
@@ -1506,6 +1510,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.T_Aula_3.setText(_translate("MainWindow", "-"))
         self.T_Sala_3.setText(_translate("MainWindow", "-"))
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

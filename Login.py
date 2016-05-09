@@ -77,12 +77,20 @@ class DialogTest(QtGui.QDialog):
         try: 
            user == dicionario["name"]
            if password == dicionario["password"]:
-              self.buttonBox.accepted.connect(self.OKClicked)
+                if not username:
+                    QtGui.QMessageBox.warning(self, 'Dang it!', 'Username Missing')
+                elif password != cpassword:
+                    QtGui.QMessageBox.warning(self, 'Dang it!', 'Passwords Do Not Match')
+                self.buttonBox.accepted.connect(self.OKClicked)
 
            else:
               QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
         except TypeError:
             QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
+
+
+        
+        
               
                 
     def NovoUsuarioClicked(self):   
