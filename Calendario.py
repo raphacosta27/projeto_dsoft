@@ -47,18 +47,17 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.checkbox_editarAula.setObjectName("checkbox_editarAula")
         self.Lay_Editar_Aulas.addWidget(self.checkbox_editarAula)
         self.verticalLayout.addLayout(self.Lay_Editar_Aulas)
+        self.checkbox_editarAula.stateChanged.connect(self.EditarAulaChecked) 
+
         self.Lay_Editar_Horarios = QtGui.QHBoxLayout()
         self.Lay_Editar_Horarios.setObjectName("Lay_Editar_Horarios")
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.Lay_Editar_Horarios.addItem(spacerItem1)
         self.checkbox_editarHora = QtGui.QCheckBox(self.centralwidget)
-        self.checkbox_editarHora.setChecked(False)
-        self.checkbox_editarHora.setAutoRepeat(False)
-        self.checkbox_editarHora.setAutoExclusive(False)
-        self.checkbox_editarHora.setTristate(False)
         self.checkbox_editarHora.setObjectName("checkbox_editarHora")
         self.Lay_Editar_Horarios.addWidget(self.checkbox_editarHora)
         self.verticalLayout.addLayout(self.Lay_Editar_Horarios)
+        self.checkbox_editarHora.stateChanged.connect(self.EditarHoraChecked)
 #-----------------------------------------------------------------#   
 
         self.horizontalLayout = QtGui.QHBoxLayout()
@@ -1511,6 +1510,17 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.T_Sala_3.setText(_translate("MainWindow", "-"))
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
 
+    def EditarAulaChecked(self):
+        if self.checkbox_editarAula.isChecked():
+            print("Aula")
+        else:
+            print("Não")
+
+    def EditarHoraChecked(self):
+        if self.checkbox_editarHora.isChecked():
+            self.Label_Horario1.TextInteractionFlag(TextSelectableByMouse, TextSelectableByKeyboard, TextEditable, TextSelectableByMouse)
+        else:
+            print("Não")
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
