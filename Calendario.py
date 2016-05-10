@@ -1518,9 +1518,22 @@ class Ui_Calendario(QtGui.QMainWindow):
 
     def EditarHoraChecked(self):
         if self.checkbox_editarHora.isChecked():
-            self.Label_Horario1.TextInteractionFlag(TextSelectableByMouse, TextSelectableByKeyboard, TextEditable, TextSelectableByMouse)
+            self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario4.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario5.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario6.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario7.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
         else:
-            print("Não")
+            self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario3.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario4.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario5.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario6.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario7.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
