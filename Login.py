@@ -77,7 +77,7 @@ class DialogTest(QtGui.QDialog):
         try: 
            user == dicionario["name"]
            if password == dicionario["password"]:
-              self.buttonBox.accepted.connect(self.OKClicked)
+                self.buttonBox.accepted.connect(self.OKClicked)
 
            else:
               QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")

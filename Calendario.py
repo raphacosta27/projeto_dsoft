@@ -37,6 +37,8 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_TituloJanela.setAlignment(QtCore.Qt.AlignCenter)
         self.Label_TituloJanela.setObjectName("Label_TituloJanela")
         self.verticalLayout.addWidget(self.Label_TituloJanela)
+
+#---------------- Checkbox para editar a janela -----------------#        
         self.Lay_Editar_Aulas = QtGui.QHBoxLayout()
         self.Lay_Editar_Aulas.setObjectName("Lay_Editar_Aulas")
         spacerItem = QtGui.QSpacerItem(1143, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
@@ -45,18 +47,19 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.checkbox_editarAula.setObjectName("checkbox_editarAula")
         self.Lay_Editar_Aulas.addWidget(self.checkbox_editarAula)
         self.verticalLayout.addLayout(self.Lay_Editar_Aulas)
+        self.checkbox_editarAula.stateChanged.connect(self.EditarAulaChecked) 
+
         self.Lay_Editar_Horarios = QtGui.QHBoxLayout()
         self.Lay_Editar_Horarios.setObjectName("Lay_Editar_Horarios")
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.Lay_Editar_Horarios.addItem(spacerItem1)
         self.checkbox_editarHora = QtGui.QCheckBox(self.centralwidget)
-        self.checkbox_editarHora.setChecked(False)
-        self.checkbox_editarHora.setAutoRepeat(False)
-        self.checkbox_editarHora.setAutoExclusive(False)
-        self.checkbox_editarHora.setTristate(False)
         self.checkbox_editarHora.setObjectName("checkbox_editarHora")
         self.Lay_Editar_Horarios.addWidget(self.checkbox_editarHora)
         self.verticalLayout.addLayout(self.Lay_Editar_Horarios)
+        self.checkbox_editarHora.stateChanged.connect(self.EditarHoraChecked)
+#-----------------------------------------------------------------#   
+
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.Grade_horario = QtGui.QGridLayout()
@@ -1506,6 +1509,31 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.T_Aula_3.setText(_translate("MainWindow", "-"))
         self.T_Sala_3.setText(_translate("MainWindow", "-"))
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
+
+    def EditarAulaChecked(self):
+        if self.checkbox_editarAula.isChecked():
+            print("Aula")
+        else:
+            print("Não")
+
+    def EditarHoraChecked(self):
+        if self.checkbox_editarHora.isChecked():
+            self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario3.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario4.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario5.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario6.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+            self.Label_Horario7.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
+        else:
+            self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario2.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario3.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario4.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario5.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario6.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+            self.Label_Horario7.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
