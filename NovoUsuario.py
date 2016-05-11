@@ -237,32 +237,32 @@ class Ui_Dialog(QtGui.QDialog):
             firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox.text())
 
         if self.checkBox_2.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_2.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades1", data = self.checkBox_2.text())
 
         if self.checkBox_3.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_3.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades2", data = self.checkBox_3.text())
 
             
         if self.checkBox_4.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_4.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades3", data = self.checkBox_4.text())
 
         if self.checkBox_5.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_5.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades4", data = self.checkBox_5.text())
 
         if self.checkBox_6.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_6.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades5", data = self.checkBox_6.text())
 
             
         if self.checkBox_7.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_7.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades6", data = self.checkBox_7.text())
 
             
         if self.checkBox_8.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_8.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades7", data = self.checkBox_8.text())
 
             
         if self.checkBox_9.isChecked():
-            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_9.text())
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades8", data = self.checkBox_9.text())
 
         if self.checkBox_10.isChecked():
             firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_10.text())
