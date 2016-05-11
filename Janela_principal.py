@@ -121,7 +121,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Menu"))
         self.boas_vindas.setText(_translate("MainWindow", "Bem-Vindo ao Integrator !"))
         self.pergunta.setText(_translate("MainWindow", "O que você deseja acessar ?"))
         self.descr_janela.setText(_translate("MainWindow", "Aqui você pode acessar diversos serviços para que sua vida na sala seja muito mais prática e rápida."))

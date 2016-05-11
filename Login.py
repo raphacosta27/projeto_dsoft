@@ -50,7 +50,6 @@ class DialogTest(QtGui.QDialog):
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.rejected.connect(self.CancelClicked)
         self.buttonBox.accepted.connect(self.tentativalogin)
-#        self.buttonBox.accepted.connect(self.getpassword)
         self.buttonBox.setObjectName("buttonBox")
         self.pushButton = QtGui.QPushButton(self.groupBox)
         self.pushButton.setGeometry(QtCore.QRect(10, 110, 75, 23))
@@ -63,7 +62,7 @@ class DialogTest(QtGui.QDialog):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.setWindowTitle(_translate("Dialog", "Login"))
         self.groupBox.setTitle(_translate("Dialog", "Login"))
         self.label.setText(_translate("Dialog", "Login"))
         self.label_2.setText(_translate("Dialog", "Senha"))
