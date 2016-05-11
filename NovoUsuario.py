@@ -178,7 +178,7 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_7.setText(_translate("Dialog", "Deixe aqui o link do seu perfil no Facebook para caso as pessoas queiram te adicionar !"))
         self.label_8.setText(_translate("Dialog", "Seu Nome de Usuário no Snapchat:"))
         self.label_9.setText(_translate("Dialog", "Redes Sociais"))
-        self.checkBox.setText(_translate("Dialog", "Atlética Inper"))
+        self.checkBox.setText(_translate("Dialog", "Atlética Insper"))
         self.checkBox_2.setText(_translate("Dialog", "Diretório Acadêmico"))
         self.checkBox_3.setText(_translate("Dialog", "Design Challenge"))
         self.checkBox_4.setText(_translate("Dialog", "GAS"))
@@ -198,6 +198,8 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_14.setText(_translate("Dialog", "Senha:"))
         self.label_15.setText(_translate("Dialog", "Confirme sua senha:"))
         self.buttonBox.accepted.connect(self.NovoUser)
+        self.buttonBox.accepted.connect(self.checkButtons)
+        
     
     def CancelClicked (self):
         self.close()
@@ -227,10 +229,55 @@ class Ui_Dialog(QtGui.QDialog):
         firebase.put("/users/", name = self.new_user, data = {'name' : self.new_user, 'password' : self.new_password, 'nome': self.nome, 'idade': self.idade, 'email' : self.email, 'telefone' : self.telefone,
         'facebook': self.facebook, 'snapchat': self.snapchat, 'instagram': self.instagram, 'adicional': self.add_information})
         
+        self.checkButtons
         
-        
-    
-        
+    def checkButtons(self):
+            
+        if self.checkBox.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox.text())
+
+        if self.checkBox_2.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_2.text())
+
+        if self.checkBox_3.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_3.text())
+
+            
+        if self.checkBox_4.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_4.text())
+
+        if self.checkBox_5.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_5.text())
+
+        if self.checkBox_6.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_6.text())
+
+            
+        if self.checkBox_7.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_7.text())
+
+            
+        if self.checkBox_8.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_8.text())
+
+            
+        if self.checkBox_9.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_9.text())
+
+        if self.checkBox_10.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_10.text())
+
+        if self.checkBox_11.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_11.text())
+
+            
+        if self.checkBox_12.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_12.text())
+
+            
+        if self.checkBox_13.isChecked():
+            firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades", data = self.checkBox_13.text())   
+            
         self.close()
         
         

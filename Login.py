@@ -82,7 +82,7 @@ class DialogTest(QtGui.QDialog):
            else:
               QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
         except TypeError:
-            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")    
               
                 
     def NovoUsuarioClicked(self):   
