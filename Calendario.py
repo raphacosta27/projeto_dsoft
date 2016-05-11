@@ -1,30 +1,29 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Calendário_final.ui'
+# Form implementation generated from reading ui file 'Calendárioex.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt4 import QtCore, QtGui, QtGui
 import sys
-
 
 class Ui_Calendario(QtGui.QMainWindow):
     def __init__(self):
         super(Ui_Calendario, self).__init__()
-        
+
         self.setupUi()
     def setupUi(self):
         self.setObjectName("MainWindow")
-        self.resize(1164, 869)
+        self.resize(1164, 865)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("calendar.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(icon)
         self.centralwidget = QtGui.QWidget(self)
         self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout = QtGui.QVBoxLayout(self.centralwidget)
-        self.verticalLayout.setObjectName("verticalLayout")
+        self.verticalLayout_2 = QtGui.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.Label_TituloJanela = QtGui.QLabel(self.centralwidget)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
@@ -36,31 +35,39 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_TituloJanela.setFont(font)
         self.Label_TituloJanela.setAlignment(QtCore.Qt.AlignCenter)
         self.Label_TituloJanela.setObjectName("Label_TituloJanela")
-        self.verticalLayout.addWidget(self.Label_TituloJanela)
+        self.verticalLayout_2.addWidget(self.Label_TituloJanela)
 
-#---------------- Checkbox para editar a janela -----------------#        
-        self.Lay_Editar_Aulas = QtGui.QHBoxLayout()
-        self.Lay_Editar_Aulas.setObjectName("Lay_Editar_Aulas")
+#---------------- Checkbox para editar a janela -----------------#   
+        self.Lay_Editar = QtGui.QHBoxLayout()
+        self.Lay_Editar.setObjectName("Lay_Editar")
         spacerItem = QtGui.QSpacerItem(1143, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.Lay_Editar_Aulas.addItem(spacerItem)
+        self.Lay_Editar.addItem(spacerItem)
+        self.Lay_editar = QtGui.QHBoxLayout()
+        self.Lay_editar.setObjectName("Lay_editar")
+        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.Lay_editar.addItem(spacerItem1)
+        self.botao_salvar = QtGui.QPushButton(self.centralwidget)
+        self.botao_salvar.setObjectName("botao_salvar")
+        self.Lay_editar.addWidget(self.botao_salvar)
+        self.botao_salvar.clicked.connect(self.Salvar_alteracoes)
+
+        self.verticalLayout = QtGui.QVBoxLayout()
+        self.verticalLayout.setObjectName("verticalLayout")
         self.checkbox_editarAula = QtGui.QCheckBox(self.centralwidget)
         self.checkbox_editarAula.setObjectName("checkbox_editarAula")
-        self.Lay_Editar_Aulas.addWidget(self.checkbox_editarAula)
-        self.verticalLayout.addLayout(self.Lay_Editar_Aulas)
-        self.checkbox_editarAula.stateChanged.connect(self.EditarAulaChecked) 
+        self.verticalLayout.addWidget(self.checkbox_editarAula)
+        self.checkbox_editarAula.stateChanged.connect(self.EditarAulaChecked)
 
-        self.Lay_Editar_Horarios = QtGui.QHBoxLayout()
-        self.Lay_Editar_Horarios.setObjectName("Lay_Editar_Horarios")
-        spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.Lay_Editar_Horarios.addItem(spacerItem1)
         self.checkbox_editarHora = QtGui.QCheckBox(self.centralwidget)
         self.checkbox_editarHora.setObjectName("checkbox_editarHora")
-        self.Lay_Editar_Horarios.addWidget(self.checkbox_editarHora)
-        self.verticalLayout.addLayout(self.Lay_Editar_Horarios)
         self.checkbox_editarHora.stateChanged.connect(self.EditarHoraChecked)
-        self.checkbox_editarAula.stateChanged.connect(self.EditarAulaChecked2)
-#-----------------------------------------------------------------#   
 
+        self.verticalLayout.addWidget(self.checkbox_editarHora)
+        self.Lay_editar.addLayout(self.verticalLayout)
+        self.Lay_Editar.addLayout(self.Lay_editar)
+        self.verticalLayout_2.addLayout(self.Lay_Editar)
+
+#-----------------------------------------------------------------#   
         self.horizontalLayout = QtGui.QHBoxLayout()
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.Grade_horario = QtGui.QGridLayout()
@@ -384,7 +391,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_Horario1.setFrameShape(QtGui.QFrame.Box)
         self.Label_Horario1.setFrameShadow(QtGui.QFrame.Plain)
         self.Label_Horario1.setAlignment(QtCore.Qt.AlignCenter)
-        self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
+        self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
         self.Label_Horario1.setObjectName("Label_Horario1")
         self.Grade_horario.addWidget(self.Label_Horario1, 3, 0, 1, 1)
         self.T7_Tipo = QtGui.QGroupBox(self.centralwidget)
@@ -1350,7 +1357,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_Horarios.setObjectName("Label_Horarios")
         self.Grade_horario.addWidget(self.Label_Horarios, 0, 0, 1, 1)
         self.horizontalLayout.addLayout(self.Grade_horario)
-        self.verticalLayout.addLayout(self.horizontalLayout)
+        self.verticalLayout_2.addLayout(self.horizontalLayout)
         self.setCentralWidget(self.centralwidget)
 
         self.retranslateUi()
@@ -1360,6 +1367,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         _translate = QtCore.QCoreApplication.translate
         self.setWindowTitle(_translate("MainWindow", "Calendário Semanal"))
         self.Label_TituloJanela.setText(_translate("MainWindow", "Calendário Semanal da Sala"))
+        self.botao_salvar.setText(_translate("MainWindow", "Salvar"))
         self.checkbox_editarAula.setText(_translate("MainWindow", "Editar Aulas"))
         self.checkbox_editarHora.setText(_translate("MainWindow", "Editar Horários"))
         self.D3_Tipo.setTitle(_translate("MainWindow", "Horário 3"))
@@ -1511,12 +1519,6 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.T_Sala_3.setText(_translate("MainWindow", "-"))
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
 
-    def EditarAulaChecked(self):
-        if self.checkbox_editarAula.isChecked():
-            print("Aula")
-        else:
-            print("Não")
-
     def EditarHoraChecked(self):
         if self.checkbox_editarHora.isChecked():
             self.Label_Horario1.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
@@ -1535,7 +1537,7 @@ class Ui_Calendario(QtGui.QMainWindow):
             self.Label_Horario6.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
             self.Label_Horario7.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
             
-    def EditarAulaChecked2 (self):
+    def EditarAulaChecked (self):
         if self.checkbox_editarAula.isChecked():
             self.S_Aula.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
             self.S_Aula_2.setTextInteractionFlags(QtCore.Qt.LinksAccessibleByKeyboard|QtCore.Qt.LinksAccessibleByMouse|QtCore.Qt.TextBrowserInteraction|QtCore.Qt.TextEditable|QtCore.Qt.TextEditorInteraction|QtCore.Qt.TextSelectableByKeyboard|QtCore.Qt.TextSelectableByMouse)
@@ -1730,6 +1732,8 @@ class Ui_Calendario(QtGui.QMainWindow):
             self.D_Aula_6.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
             self.D_Aula_7.setTextInteractionFlags(QtCore.Qt.NoTextInteraction)
             
+    def Salvar_alteracoes(self):
+        QtGui.QMessageBox.warning(self, "Calendário Modificado", "Suas alterações foram salvas!")
             
             
 if __name__ == "__main__":
