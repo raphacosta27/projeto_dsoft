@@ -197,8 +197,7 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_13.setText(_translate("Dialog", "Login:"))
         self.label_14.setText(_translate("Dialog", "Senha:"))
         self.label_15.setText(_translate("Dialog", "Confirme sua senha:"))
-        self.buttonBox.accepted.connect(self.NovoUser)
-        self.buttonBox.accepted.connect(self.checkButtons)
+        self.buttonBox.accepted.connect(self.ConfirmaSenha)
         
     
     def CancelClicked (self):
@@ -280,8 +279,26 @@ class Ui_Dialog(QtGui.QDialog):
             firebase.put("/users/{0}/entidade".format(self.new_user), name = "entidades12", data = self.checkBox_13.text())   
             
         self.close()
+    
+    def UsuarioNaoRepete(self):
+         user_count = firebase.get("/userCount", "/count")
+         UsuarioCadastrando = self.lineEdit_9.text()
+    
+         for i in range (user_count):
+             if UsuarioCadastrando == 
         
+    def ConfirmaSenha (self):
+        self.senha_1 = self.lineEdit_10.text()
+        self.senha_confirma = self.lineEdit_11.text()
         
+        if self.senha_1 == self.senha_confirma:
+            self.NovoUser()
+            self.checkButtons()
+        else:
+            QtGui.QMessageBox.warning(self, "Erro na confirmação", "As senhas não coincidem")
+
+        
+    
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     novousuario = Ui_Dialog()
