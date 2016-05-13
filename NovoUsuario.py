@@ -9,7 +9,7 @@
 from PyQt4 import QtCore, QtGui
 from firebase import firebase 
 import sys
-from perfildosalunos import JanelaPerfil
+from perfil import Ui_JanelPerfil
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 
@@ -20,7 +20,7 @@ class Ui_Dialog(QtGui.QDialog):
 
         self.setupUi()
         
-        self.perfilnovoaluno = JanelaPerfil()
+        self.perfilnovoaluno = Ui_JanelPerfil()
     def setupUi(self):
         self.setObjectName("Dialog")
         self.setEnabled(True)
