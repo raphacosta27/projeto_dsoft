@@ -6,7 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui, QtGui
+from PyQt4 import QtCore, QtGui
 import sys
 
 class Ui_Calendario(QtGui.QMainWindow):
