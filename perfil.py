@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-from ver_perfil import fillperfil
 from firebase import firebase
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 import sys
@@ -17,7 +16,7 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
     def __init__(self):
         super(Ui_JanelPerfil, self).__init__()
         self.setupUi()
-        self.ver_perfil = fillperfil()
+
     def setupUi(self):
         self.setObjectName("MainWindow")
         self.resize(1122, 608)
@@ -206,15 +205,17 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
         self.setCentralWidget(self.centralwidget)
         
         self.nome_dos_usuarios = []
-        self.dicionario = firebase.get("/users", None)
-        for usuario in self.dicionario:
-            self.nome_dos_usuarios.append(usuario) 
-        
+        dicionario = firebase.get("/users", None)
+        for usuario in dicionario:
+            self.nome_dos_usuarios.append(usuario)
+            self.comboBox.currentIndexChanged.connect(self.slot)
+            
         self.comboBox.addItems(self.nome_dos_usuarios)
         
 
         self.retranslateUi()
-        QtCore.QMetaObject.connectSlotsByName(self)
+        QtCore.QMetaObject.connectSlotsByName(self)        
+    
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
@@ -240,9 +241,20 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
         self.dicionario = firebase.get("/users", None)
         for usuario in self.dicionario:
             self.nome_dos_usuarios.append(usuario)
-#    def texto_do_resto(self)
-        
 
+    def slot (self):
+        current_slot = self.comboBox.currentText()
+        self.current_name = firebase.get("/users", "{0}".format(current_slot))
+        
+        self.lineEdit.setText(self.current_name["nome"])
+        self.lineEdit_2.setText(self.current_name["idade"])
+        self.lineEdit_7.setText(self.current_name["email"])
+        self.lineEdit_10.setText(self.current_name["telefone"])
+        self.lineEdit_6.setText(self.current_name["facebook"])
+        self.lineEdit_8.setText(self.current_name["snapchat"])
+        self.lineEdit_9.setText(self.current_name["instagram"])
+        self.lineEdit_11.setText(self.current_name["adicional"])
+        
 
         
     

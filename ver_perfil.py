@@ -16,7 +16,7 @@ class fillperfil:
 
         self.nome_dos_usuarios = []
         self.dicionario = firebase.get("/users", None)
-        for usuario in self.dicionario:
+        for usuario in self.dicionario.values():
             self.nome_dos_usuarios.append(usuario)
         print(self.nome_dos_usuarios)    
         return self.nome_dos_usuarios
