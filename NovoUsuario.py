@@ -280,12 +280,12 @@ class Ui_Dialog(QtGui.QDialog):
             
         self.close()
     
-    def UsuarioNaoRepete(self):
-         user_count = firebase.get("/userCount", "/count")
-         UsuarioCadastrando = self.lineEdit_9.text()
-    
-         for i in range (user_count):
-             if UsuarioCadastrando == 
+#    def UsuarioNaoRepete(self):
+#         user_count = firebase.get("/userCount", "/count")
+#         UsuarioCadastrando = self.lineEdit_9.text()
+#    
+#         for i in range (user_count):
+#             if UsuarioCadastrando == 
         
     def ConfirmaSenha (self):
         self.senha_1 = self.lineEdit_10.text()
