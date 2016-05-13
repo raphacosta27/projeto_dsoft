@@ -50,6 +50,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.botao_salvar.setObjectName("botao_salvar")
         self.Lay_editar.addWidget(self.botao_salvar)
         self.botao_salvar.clicked.connect(self.Salvar_alteracoes)
+        
 
         self.verticalLayout = QtGui.QVBoxLayout()
         self.verticalLayout.setObjectName("verticalLayout")

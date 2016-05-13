@@ -9,7 +9,7 @@
 from PyQt4 import QtCore, QtGui
 import sys
 from final import Ui_Form
-from perfildosalunos import JanelaPerfil
+from perfil import Ui_JanelPerfil
 from Calendario import Ui_Calendario
 
 
@@ -140,7 +140,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.servicos.show()
     
     def PerfilCLicked (self): 
-        self.perfis = JanelaPerfil()
+        self.perfis = Ui_JanelPerfil()
         self.perfis.show()
     def CalendarioClicked(self):
         self.calendario = Ui_Calendario()
