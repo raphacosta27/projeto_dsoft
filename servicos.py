@@ -9,12 +9,12 @@
 from PyQt4 import QtCore, QtGui
 import sys
 
-class Ui_Form(QtGui.QWidget):
+class Ui_Servicos(QtGui.QWidget):
     def __init__ (self):
-       super(Ui_Form, self).__init__()
+        super(Ui_Servicos, self).__init__()
        
        
-       self.setupUi()
+        self.setupUi()
     def setupUi(self):
         self.setObjectName("Form")
         self.resize(774, 571)
@@ -123,6 +123,6 @@ class Ui_Form(QtGui.QWidget):
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    teste = Ui_Form()
+    teste = Ui_Servicos()
     teste.show()
     sys.exit(app.exec_())

@@ -8,9 +8,9 @@
 
 from PyQt4 import QtCore, QtGui
 import sys
-from final import Ui_Form
+from servicos import Ui_Servicos
 from perfil import Ui_JanelPerfil
-from Calendario import Ui_Calendario
+from Calendario import Ui_calendario_novo
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
@@ -145,6 +145,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def CalendarioClicked(self):
         self.calendario = Ui_Calendario()
         self.calendario.show()
+
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     mainwindow = Ui_MainWindow()
