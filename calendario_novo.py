@@ -1311,7 +1311,7 @@ class Ui_Calendario(QtGui.QMainWindow):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Calendário Semanal"))
+        self.setWindowTitle(_translate("MainWindow", "Calendário Semanal"))
         self.Label_TituloJanela.setText(_translate("MainWindow", "Calendário Semanal da Sala"))
         self.D3_Tipo.setTitle(_translate("MainWindow", "Livre"))
         self.but_D_3.setText(_translate("MainWindow", "-"))
