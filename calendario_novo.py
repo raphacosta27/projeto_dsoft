@@ -1309,61 +1309,61 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self)
 
-        self.but_Seg.clicked.connect(self.gde1) #Aula GDE marcos lopes
-        self.but_Seg_2.clicked.connect(self.modsim1) #Aula modsim 403
-        self.but_Seg_3.clicked.connect(self.adi_evento)
-        self.but_Seg_4.clicked.connect(self.modsim2) #atendimento modsim 403
-        self.but_Seg_5.clicked.connect(self.adi_evento)
-        self.but_Seg_6.clicked.connect(self.adi_evento)
-        self.but_Seg_7.clicked.connect(self.adi_evento)
-
-        self.but_ter.clicked.connect(self.instrumed) #atendimento instrumed 401
-        self.but_ter_2.clicked.connect(self.desoft1) #atendimento desoft albertor bandeira queiroz 2
-        self.but_ter_3.clicked.connect(self.adi_evento)
-        self.but_ter_4.clicked.connect(self.instrumed) #aula instrumed 401
-        self.but_ter_5.clicked.connect(self.instrumed) #aula instrumed 401
-        self.but_ter_6.clicked.connect(self.adi_evento)
-        self.but_ter_7.clicked.connect(self.adi_evento)
-
-        self.but_Qua.clicked.connect(self.desoft2) #aula desoft 403
-        self.but_Qua_2.clicked.connect(self.gde2) #Atendimento GDE 403
-        self.but_Qua_3.clicked.connect(self.adi_evento) 
-        self.but_Qua_4.clicked.connect(self.natureza) #aula natureza 403
-        self.but_Qua_5.clicked.connect(self.natureza) #aula natureza 403
-        self.but_Qua_6.clicked.connect(self.natureza3) #atendimento natureza 403
-        self.but_Qua_7.clicked.connect(self.adi_evento) 
-
-        self.but_Qui.clicked.connect(self.gde3) #aula gde 307
-        self.but_Qui_2.clicked.connect(self.gde4) #tutoria gde 408
-        self.but_Qui_3.clicked.connect(self.adi_evento)
-        self.but_Qui_4.clicked.connect(self.adi_evento)
-        self.but_Qui_5.clicked.connect(self.modsim1)
-        self.but_Qui_6.clicked.connect(self.adi_evento)
-        self.but_Qui_7.clicked.connect(self.adi_evento)
-
-        self.but_sex.clicked.connect(self.desoft2)
-        self.but_sex_2.clicked.connect(self.modsim1)
-        self.but_sex_3.clicked.connect(self.adi_evento)
-        self.but_sex_4.clicked.connect(self.adi_evento)
-        self.but_sex_5.clicked.connect(self.adi_evento)
-        self.but_sex_6.clicked.connect(self.adi_evento)
-        self.but_sex_7.clicked.connect(self.adi_evento)
-
-        self.but_Sab.clicked.connect(self.adi_evento)
-        self.but_Sab_2.clicked.connect(self.adi_eventod)
-        self.but_Sab_3.clicked.connect(self.adi_evento)
-        self.but_Sab_4.clicked.connect(self.adi_evento)
-        self.but_Sab_5.clicked.connect(self.adi_evento)
-        self.but_Sab_6.clicked.connect(self.adi_evento)
-        self.but_Sab_7.clicked.connect(self.adi_evento)
-
-        self.but_D.clicked.connect(self.adi_evento)
-        self.but_D_2.clicked.connect(self.adi_evento)
-        self.but_D_3.clicked.connect(self.adi_evento)
-        self.but_D_4.clicked.connect(self.adi_evento)
-        self.but_D_5.clicked.connect(self.adi_evento)
-        self.but_D_6.clicked.connect(self.adi_evento)
-        self.but_D_7.clicked.connect(self.adi_evento)
+#        self.but_Seg.clicked.connect(self.gde1) #Aula GDE marcos lopes
+#        self.but_Seg_2.clicked.connect(self.modsim1) #Aula modsim 403
+#        self.but_Seg_3.clicked.connect(self.adi_evento)
+#        self.but_Seg_4.clicked.connect(self.modsim2) #atendimento modsim 403
+#        self.but_Seg_5.clicked.connect(self.adi_evento)
+#        self.but_Seg_6.clicked.connect(self.adi_evento)
+#        self.but_Seg_7.clicked.connect(self.adi_evento)
+#
+#        self.but_ter.clicked.connect(self.instrumed) #atendimento instrumed 401
+#        self.but_ter_2.clicked.connect(self.desoft1) #atendimento desoft albertor bandeira queiroz 2
+#        self.but_ter_3.clicked.connect(self.adi_evento)
+#        self.but_ter_4.clicked.connect(self.instrumed) #aula instrumed 401
+#        self.but_ter_5.clicked.connect(self.instrumed) #aula instrumed 401
+#        self.but_ter_6.clicked.connect(self.adi_evento)
+#        self.but_ter_7.clicked.connect(self.adi_evento)
+#
+#        self.but_Qua.clicked.connect(self.desoft2) #aula desoft 403
+#        self.but_Qua_2.clicked.connect(self.gde2) #Atendimento GDE 403
+#        self.but_Qua_3.clicked.connect(self.adi_evento) 
+#        self.but_Qua_4.clicked.connect(self.natureza) #aula natureza 403
+#        self.but_Qua_5.clicked.connect(self.natureza) #aula natureza 403
+#        self.but_Qua_6.clicked.connect(self.natureza3) #atendimento natureza 403
+#        self.but_Qua_7.clicked.connect(self.adi_evento) 
+#
+#        self.but_Qui.clicked.connect(self.gde3) #aula gde 307
+#        self.but_Qui_2.clicked.connect(self.gde4) #tutoria gde 408
+#        self.but_Qui_3.clicked.connect(self.adi_evento)
+#        self.but_Qui_4.clicked.connect(self.adi_evento)
+#        self.but_Qui_5.clicked.connect(self.modsim1)
+#        self.but_Qui_6.clicked.connect(self.adi_evento)
+#        self.but_Qui_7.clicked.connect(self.adi_evento)
+#
+#        self.but_sex.clicked.connect(self.desoft2)
+#        self.but_sex_2.clicked.connect(self.modsim1)
+#        self.but_sex_3.clicked.connect(self.adi_evento)
+#        self.but_sex_4.clicked.connect(self.adi_evento)
+#        self.but_sex_5.clicked.connect(self.adi_evento)
+#        self.but_sex_6.clicked.connect(self.adi_evento)
+#        self.but_sex_7.clicked.connect(self.adi_evento)
+#
+#        self.but_Sab.clicked.connect(self.adi_evento)
+#        self.but_Sab_2.clicked.connect(self.adi_eventod)
+#        self.but_Sab_3.clicked.connect(self.adi_evento)
+#        self.but_Sab_4.clicked.connect(self.adi_evento)
+#        self.but_Sab_5.clicked.connect(self.adi_evento)
+#        self.but_Sab_6.clicked.connect(self.adi_evento)
+#        self.but_Sab_7.clicked.connect(self.adi_evento)
+#
+#        self.but_D.clicked.connect(self.adi_evento)
+#        self.but_D_2.clicked.connect(self.adi_evento)
+#        self.but_D_3.clicked.connect(self.adi_evento)
+#        self.but_D_4.clicked.connect(self.adi_evento)
+#        self.but_D_5.clicked.connect(self.adi_evento)
+#        self.but_D_6.clicked.connect(self.adi_evento)
+#        self.but_D_7.clicked.connect(self.adi_evento)
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
@@ -1483,9 +1483,9 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_ter_3.setText(_translate("MainWindow", "-"))
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
 
-        def adi_evento(self):
-            self.novo_evento = Ui_Form()
-            self.servicos.show()
+#        def adi_evento(self):
+#            self.novo_evento = Ui_Form()
+#            self.servicos.show()
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

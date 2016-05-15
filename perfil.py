@@ -243,8 +243,8 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
             self.nome_dos_usuarios.append(usuario)
 
     def slot (self):
-        current_slot = self.comboBox.currentText()
-        self.current_name = firebase.get("/users", "{0}".format(current_slot))
+        self.current_slot = self.comboBox.currentText()
+        self.current_name = firebase.get("/users", "{0}".format(self.current_slot))
         
         self.lineEdit.setText(self.current_name["nome"])
         self.lineEdit_2.setText(self.current_name["idade"])
@@ -254,6 +254,43 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
         self.lineEdit_8.setText(self.current_name["snapchat"])
         self.lineEdit_9.setText(self.current_name["instagram"])
         self.lineEdit_11.setText(self.current_name["adicional"])
+        self.lineEdit_4.setText(self.current_name["curso"])
+        self.lineEdit_3.setText(self.current_name["aniversario"])
+        
+        
+        self.frase = 0
+        dicientidades = firebase.get("/users/{0}".format(self.current_slot), "/entidade")
+        listadeentidades = []
+        for v in dicientidades.values():
+            listadeentidades.append(v)
+        if len(listadeentidades) == 1 :
+            self.lineEdit_5.setText("{0}".format(listadeentidades[0]))
+        elif len(listadeentidades) == 2 :
+            self.lineEdit_5.setText("{0} e {1}".format(listadeentidades[0], listadeentidades[1]))
+        elif len(listadeentidades) == 3:
+            self.lineEdit_5.setText("{0}, {1} e {2}".format(listadeentidades[0], listadeentidades[1], listadeentidades[2]))
+        else:
+            self.lineEdit_5.setText("Nenhuma")
+
+
+
+    def TextoEntidades(self):
+        self.frase = 0
+        dicientidades = firebase.get("/users/{0}".format(self.current_slot), "/entidade")
+        listadeentidades = []
+        for v in dicientidades.values():
+            listadeentidades.append(v)
+        if len(listadeentidades) == 1 :
+            self.frase = "{0}".format(listadeentidades[0])
+        elif len(listadeentidades) == 2 :
+            self.frase = "{0} e {1}".format(listadeentidades[0], listadeentidades[1])
+        elif len(listadeentidades) == 3:
+            self.frase = "{0}, {1} e {2}".format(listadeentidades[0], listadeentidades[1], listadeentidades[2])
+        else:
+            self.frase = "Nenhuma"
+        return self.frase            
+        
+        
         
 
         

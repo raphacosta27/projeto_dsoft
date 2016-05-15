@@ -10,7 +10,7 @@ from PyQt4 import QtCore, QtGui
 import sys
 from servicos import Ui_Servicos
 from perfil import Ui_JanelPerfil
-from Calendario import Ui_calendario_novo
+from calendario_novo import Ui_Calendario
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
@@ -136,14 +136,14 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.descr_servicos.setText(_translate("MainWindow", "Não sabe onde comer ? Nem onde sacar dinheiro ? Confira aqui algumas dicas recomendadas pelo Integrator."))
     
     def ServicosClicked(self):
-        self.servicos = Ui_Form()
+        self.servicos = Ui_Servicos()
         self.servicos.show()
     
     def PerfilCLicked (self): 
         self.perfis = Ui_JanelPerfil()
         self.perfis.show()
     def CalendarioClicked(self):
-        self.calendario = Ui_Calendario()
+        self.calendario = Ui_Calendario()   
         self.calendario.show()
 
 if __name__ == "__main__":
