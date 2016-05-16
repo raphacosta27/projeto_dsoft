@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'calennovo.ui'
-#
+#r
 # Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-from abas import Ui_Form
+from abas import Ui_abas_calendario
+from add_event import Ui_aba_addevento
 import sys
 
 class Ui_Calendario(QtGui.QMainWindow):
@@ -1312,7 +1313,7 @@ class Ui_Calendario(QtGui.QMainWindow):
 
 #        self.but_Seg.clicked.connect(self.gde1) #Aula GDE marcos lopes
 #        self.but_Seg_2.clicked.connect(self.modsim1) #Aula modsim 403
-#        self.but_Seg_3.clicked.connect(self.adi_evento)
+        self.but_Seg_3.clicked.connect(self.adi_evento)
 #        self.but_Seg_4.clicked.connect(self.modsim2) #atendimento modsim 403
         self.but_Seg_5.clicked.connect(self.adi_evento)
         self.but_Seg_6.clicked.connect(self.adi_evento)
@@ -1485,8 +1486,12 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.Label_Horarios.setText(_translate("MainWindow", "Horários"))
         
     def adi_evento(self):
-        self.novo_evento = Ui_Form()
+        self.novo_evento = Ui_aba_addevento
         self.novo_evento.show()
+
+    def abas_calen(self):
+        self.ver_evento = Ui_abas_calendario
+        self.ver_evento.show()
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
