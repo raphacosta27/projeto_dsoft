@@ -6,16 +6,26 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui, QtGui
+from PyQt4 import QtCore, QtGui
+import sys
 
-class Ui_Form(object):
-    def setupUi(self, Form):
+class Ui_Form(QtGui.QWidget):
+    
+    def __init__(self):
+        super(Ui_Form, self).__init__()
+        
+#        self.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowMinimizeButtonHint)
+        
+        self.setupUi()
+    
+        
+    def setupUi(self):
         self.setObjectName("Form")
         self.resize(273, 342)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../../../../Documents/GitHub/projeto_dsoft/datails.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(icon)
-        self.horizontalLayout = QtGui.QHBoxLayout(Form)
+        self.horizontalLayout = QtGui.QHBoxLayout(self)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.tabWidget = QtGui.QTabWidget(self)
         self.tabWidget.setTabPosition(QtGui.QTabWidget.North)
@@ -23,7 +33,7 @@ class Ui_Form(object):
         self.tabWidget.setElideMode(QtCore.Qt.ElideNone)
         self.tabWidget.setTabsClosable(False)
         self.tabWidget.setMovable(False)
-        self.tabWidget.setTabBarAutoHide(True)
+#        self.tabWidget.setTabBarAutoHide(True)
         self.tabWidget.setObjectName("tabWidget")
         self.aba_aula = QtGui.QWidget()
         self.aba_aula.setObjectName("aba_aula")
@@ -191,13 +201,13 @@ class Ui_Form(object):
         self.tabWidget.addTab(self.aba_tpdo, "")
         self.horizontalLayout.addWidget(self.tabWidget)
 
-        self.retranslateUi(Form)
+        self.retranslateUi()
         self.tabWidget.setCurrentIndex(2)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+        QtCore.QMetaObject.connectSlotsByName(self)
 
-    def retranslateUi(self, Form):
+    def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Detalhes"))
+        self.setWindowTitle(_translate("Form", "Detalhes"))
         self.label_materia.setText(_translate("Form", "Matéria"))
         self.label_abreviacao.setText(_translate("Form", "Abreviação"))
         self.label_sobremateria.setText(_translate("Form", "Sobre a matéria:"))
@@ -224,3 +234,8 @@ class Ui_Form(object):
         self.dateEdit.setDisplayFormat(_translate("Form", "dd/MM"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aba_tpdo), _translate("Form", "To do"))
 
+if __name__ == "__main__":
+    app = QtGui.QApplication(sys.argv)
+    abas = Ui_Form()
+    abas.show()
+    sys.exit(app.exec_())
