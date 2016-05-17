@@ -219,7 +219,7 @@ class Ui_JanelPerfil(QtGui.QMainWindow):
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
-        self.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.setWindowTitle(_translate("MainWindow", "Perfil dos Alunos"))
         self.label.setText(_translate("MainWindow", "Banco de dados dos alunos da sala"))
         self.label_2.setText(_translate("MainWindow", "Nome do aluno:"))
         self.groupBox.setTitle(_translate("MainWindow", "Dados"))

@@ -9,16 +9,11 @@
 from PyQt4 import QtCore, QtGui
 import sys
 
-class Ui_Form(QtGui.QWidget):
-    
-    def __init__(self):
-        super(Ui_Form, self).__init__()
-        
-#        self.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowMinimizeButtonHint)
-        
+class Ui_abas_calendario(QtGui.QWidget):
+    def __init__ (self):
+        super(Ui_abas_calendario, self).__init__()
+       
         self.setupUi()
-    
-        
     def setupUi(self):
         self.setObjectName("Form")
         self.resize(273, 342)
@@ -33,7 +28,7 @@ class Ui_Form(QtGui.QWidget):
         self.tabWidget.setElideMode(QtCore.Qt.ElideNone)
         self.tabWidget.setTabsClosable(False)
         self.tabWidget.setMovable(False)
-#        self.tabWidget.setTabBarAutoHide(True)
+        # self.tabWidget.setTabBarAutoHide(True)
         self.tabWidget.setObjectName("tabWidget")
         self.aba_aula = QtGui.QWidget()
         self.aba_aula.setObjectName("aba_aula")
@@ -237,6 +232,6 @@ class Ui_Form(QtGui.QWidget):
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    abas = Ui_Form()
-    abas.show()
+    teste = Ui_abas_calendario()
+    teste.show()
     sys.exit(app.exec_())

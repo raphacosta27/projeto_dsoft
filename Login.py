@@ -10,6 +10,7 @@ from Janela_principal import Ui_MainWindow
 from firebase import firebase
 
 
+
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 
 class DialogTest(QtGui.QDialog):
@@ -95,6 +96,13 @@ class DialogTest(QtGui.QDialog):
         self.janela = Ui_MainWindow()
         self.janela.show()
 
+#    def SaveCalendarioClicked(self):
+#        self.abas = Ui_abas_calendario()
+#        self.nome_do_evento = self.abas.lineEdit_3.text()
+#        self.data_do_evento = self.abas.dateEdit.text()
+#        print(self.nome_do_evento, self.data_do_evento)
+        
+        
 
 # firebase.get("1","2") #Pegar do dicionario 2, dentro do dicionario 1
 # firebase.put("2", name="name", data="data") #Adicionar no dicionario, a chave name como valor data
