@@ -1314,25 +1314,22 @@ class Ui_Calendario(QtGui.QMainWindow):
         QtCore.QMetaObject.connectSlotsByName(self)
 
         self.but_Seg.clicked.connect(self.GDESegundaClicked)
-        self.but_Seg_2.clicked.connect(self.MODSIMSegundaClicked)
-#        self.but_Seg_3.clicked.connect(self.adi_evento)
-#        self.but_Seg.clicked.connect(self.gde1) #Aula GDE marcos lopes
-#        self.but_Seg_2.clicked.connect(self.modsim1) #Aula modsim 403
+        self.but_Seg_2.clicked.connect(self.MODSIM1Clicked)
         self.but_Seg_3.clicked.connect(self.adi_evento)
-#        self.but_Seg_4.clicked.connect(self.modsim2) #atendimento modsim 403
+        self.but_Seg_4.clicked.connect(self.MODSIM1Clicked)
         self.but_Seg_5.clicked.connect(self.adi_evento)
         self.but_Seg_6.clicked.connect(self.adi_evento)
         self.but_Seg_7.clicked.connect(self.adi_evento)
-#
-#        self.but_ter.clicked.connect(self.instrumed) #atendimento instrumed 401
-#        self.but_ter_2.clicked.connect(self.desoft1) #atendimento desoft albertor bandeira queiroz 2
+
+        self.but_ter.clicked.connect(self.INSTRUMEDClicked) #atendimento instrumed 401
+        self.but_ter_2.clicked.connect(self.DESOFTatClicked) #atendimento desoft albertor bandeira queiroz 2
         self.but_ter_3.clicked.connect(self.adi_evento)
-#        self.but_ter_4.clicked.connect(self.instrumed) #aula instrumed 401
-#        self.but_ter_5.clicked.connect(self.instrumed) #aula instrumed 401
+        self.but_ter_4.clicked.connect(self.INSTRUMEDClicked) #aula instrumed 401
+        self.but_ter_5.clicked.connect(self.INSTRUMEDClicked) #aula instrumed 401
         self.but_ter_6.clicked.connect(self.adi_evento)
         self.but_ter_7.clicked.connect(self.adi_evento)
 #
-#        self.but_Qua.clicked.connect(self.desoft2) #aula desoft 403
+        self.but_Qua.clicked.connect(self.DESOFTClicked) #aula desoft 403
 #        self.but_Qua_2.clicked.connect(self.gde2) #Atendimento GDE 403
         self.but_Qua_3.clicked.connect(self.adi_evento) 
 #        self.but_Qua_4.clicked.connect(self.natureza) #aula natureza 403
@@ -1348,8 +1345,8 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_Qui_6.clicked.connect(self.adi_evento)
         self.but_Qui_7.clicked.connect(self.adi_evento)
 #
-#        self.but_sex.clicked.connect(self.desoft2)
-#        self.but_sex_2.clicked.connect(self.modsim1)
+        self.but_sex.clicked.connect(self.DESOFTClicked)
+        self.but_sex_2.clicked.connect(self.MODSIM1Clicked)
         self.but_sex_3.clicked.connect(self.adi_evento)
         self.but_sex_4.clicked.connect(self.adi_evento)
         self.but_sex_5.clicked.connect(self.adi_evento)
@@ -1494,24 +1491,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         
     def adi_evento(self):
         self.new_event = Ui_aba_addevento()
-        self.new_event.show()
-
-
-
-    def GDESegundaClicked (self):
-        self.novo_evento = Ui_abas_calendario()
-        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
-        self.novo_evento.input_abreviacao.setText("GDE")
-        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”.")
-        self.novo_evento.input_professor.setText("Fernando Ribeiro")
-        self.novo_evento.input_sobreprof.setText("Formado em Economia na Puc-SP")
-        self.novo_evento.lineEdit.setText("Segunda - Marcos Lopes, Quinta - 307" )
-        self.novo_evento.lineEdit_2.setText("Segunda - 2 º andar, Quinta - 3 º andar")
-        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
-        
-        
-        self.novo_evento.show()
-        
+        self.new_event.show()        
         
     def BotaoSaveClicked (self):
         from Login import DialogTest
@@ -1522,7 +1502,74 @@ class Ui_Calendario(QtGui.QMainWindow):
         print(self.Login.user)
         print(self.nome_do_evento, self.data_do_evento)
         
-    def MODSIMSegundaClicked (self):
+    def GDESegundaClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
+        self.novo_evento.input_abreviacao.setText("GDE")
+        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
+        self.novo_evento.input_professor.setText("Fernando Ribeiro Leite Neto")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("Marcos Lopes" )
+        self.novo_evento.lineEdit_2.setText("Segundo Andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        self.novo_evento.show()
+
+    def MODSIM1Clicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Modelagem e Simulação do Mundo Físico")
+        self.novo_evento.input_abreviacao.setText("MODSIM")
+        self.novo_evento.input_sobremateria.setText("Por três vezes o ciclo de Modelagem e Simulação será percorrido de forma completa neste curso. Cada ciclo corresponderá a um projeto realizado pelos alunos. Os projetos serão realizados com grau crescente de autonomia por parte dos alunos. ")
+        self.novo_evento.input_professor.setText("Fabio Sismotto El Hage")
+        self.novo_evento.input_sobreprof.setText("Professor de Engenharia do Insper, Doutor em Engenharia pela Escola Politécnica da USP e pós-doutor em Política Energética pela Suffolk University, em Boston, EUA. Além de professor, atua também como consultor da Associação Brasileira de Distribuidores de Energia Elétrica (ABRADEE) nas áreas regulatória e de modelagem e simulação.")
+        self.novo_evento.lineEdit.setText("403" )
+        self.novo_evento.lineEdit_2.setText("4º andar")
+        self.novo_evento.show()
+
+    def INSTRUMEDClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Instrumentação e Medição")
+        self.novo_evento.input_abreviacao.setText("INSTRUMED")
+        self.novo_evento.input_sobremateria.setText("O Objetivo da disciplina é capacitar o aluno para aquisição, análise e tratamento de dados através do uso de sensores, transdutores e circuitos eletro-eletrônicos dedicados. As aulas serão compostas de partes teóricas e práticas de forma sequencial, permitindo a imediata aplicação dos conhecimentos teóricos apresentados. Serão realizados diversos projetos em grupo cujos objetivos são capacitar os alunos a: Identificar componentes elétricos e sua função em circuitos; Interpretar diagramas de circuitos básicos e montá-los em protoboard; Projetar circuitos simples e confeccionar placas de circuito impresso dedicadas; Utilizar instrumentação básica em eletricidade; Fazer aquisição de dados de fenômenos físicos com o emprego de sensores e circuitos eletro- eletrônicos; Analisar e apresentar dados utilizando ferramentas estatísticas básicas; Aplicar os conceitos de incerteza, exatidão, precisão, resolução e sensibilidade. ")
+        self.novo_evento.input_professor.setText("Fábio Ferraz Júnior")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Engenharia Mecânica (Mecatrônica) pela Universidade de São Paulo / EESC - São Carlos (1999), mestrado em Engenharia Mecânica (Automação de Processos de Fabricação) pela Universidade de São Paulo / EESC - São Carlos (2002) e doutorado em Engenharia Mecânica (Automação de Processos de Fabricação) pela Universidade de São Paulo / EESC - São Carlos (2007). Atualmente é diretor da SENSOFT Indústria e Automação Ltda e professor do Centro Universitário de Araraquara (UNIARA). Tem experiência na área de Engenharia Mecânica, com ênfase em Automação de Processos de Fabricação, atuando principalmente nos seguintes temas: instrumentação, monitoramento, supervisão (SCADA), CNC de arquitetura aberta, controle de processos de fabricação.")
+        self.novo_evento.lineEdit.setText("401" )
+        self.novo_evento.lineEdit_2.setText("4º andar")
+        self.novo_evento.show()
+
+    def DESOFTatClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Design de Software")
+        self.novo_evento.input_abreviacao.setText("DESOFT")
+        self.novo_evento.input_sobremateria.setText("O objetivo da disciplina é capacitar os alunos a codificar e depurar programas de computador, individualmente e em grupos, identificando necessidades funcionais e desenvolvendo heurísticas para a resolução de requisitos. O aluno trabalhará em projetos de desenvolvimento de software simples e em um projeto principal proposto pelo grupo, e que também deve ser submetido a validação, revisão e documentação do projeto. Para isso, técnicas elementares de gestão de projeto de software serão praticadas durante o curso. ")
+        self.novo_evento.input_professor.setText("Fábio Ayres")
+        self.novo_evento.input_sobreprof.setText("Fábio Ayres é professor adjunto do Insper, envolvido no desenvolvimento dos cursos de engenharia. Possui graduação e mestrado em Engenharia Elétrica pela Escola Politécnica da USP e doutorado em Engenharia Elétrica pela University of Calgary, Canadá. Foi pós-doutorando em Engenharia Biomédica pela University of Calgary, pesquisador associado do National Research Council of Canada, engenheiro de software na Opal-RT Technologies, Canadá, e no Google. Interessa-se por visão computacional, aprendizado de máquina, processamento de imagens, recuperação de informação, computação de alto desempenho.")
+        self.novo_evento.lineEdit.setText("Antônio Bandeira")
+        self.novo_evento.lineEdit_2.setText("2º andar")
+        self.novo_evento.show()
+
+    def DESOFTClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Design de Software")
+        self.novo_evento.input_abreviacao.setText("DESOFT")
+        self.novo_evento.input_sobremateria.setText("O objetivo da disciplina é capacitar os alunos a codificar e depurar programas de computador, individualmente e em grupos, identificando necessidades funcionais e desenvolvendo heurísticas para a resolução de requisitos. O aluno trabalhará em projetos de desenvolvimento de software simples e em um projeto principal proposto pelo grupo, e que também deve ser submetido a validação, revisão e documentação do projeto. Para isso, técnicas elementares de gestão de projeto de software serão praticadas durante o curso. ")
+        self.novo_evento.input_professor.setText("Fábio Ayres")
+        self.novo_evento.input_sobreprof.setText("Fábio Ayres é professor adjunto do Insper, envolvido no desenvolvimento dos cursos de engenharia. Possui graduação e mestrado em Engenharia Elétrica pela Escola Politécnica da USP e doutorado em Engenharia Elétrica pela University of Calgary, Canadá. Foi pós-doutorando em Engenharia Biomédica pela University of Calgary, pesquisador associado do National Research Council of Canada, engenheiro de software na Opal-RT Technologies, Canadá, e no Google. Interessa-se por visão computacional, aprendizado de máquina, processamento de imagens, recuperação de informação, computação de alto desempenho.")
+        self.novo_evento.lineEdit.setText("403")
+        self.novo_evento.lineEdit_2.setText("4º andar")
+        self.novo_evento.show()
+
+    def GDEatClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
+        self.novo_evento.input_abreviacao.setText("GDE")
+        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
+        self.novo_evento.input_professor.setText("Fernando Ribeiro Leite Neto")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("403" )
+        self.novo_evento.lineEdit_2.setText("4º andar")
+        self.novo_evento.show()
+
+    def MODSIM2Clicked (self):
         self.novo_evento = Ui_abas_calendario()
         self.novo_evento.input_materia.setText("Modelagem e Simulação do Mundo Físico")
         self.novo_evento.input_abreviacao.setText("MODSIM")

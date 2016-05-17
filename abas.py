@@ -16,7 +16,7 @@ class Ui_abas_calendario(QtGui.QWidget):
         self.setupUi()
     def setupUi(self):
         self.setObjectName("Form")
-        self.resize(273, 342)
+        self.resize(280, 342)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("../../../../../../Documents/GitHub/projeto_dsoft/datails.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setWindowIcon(icon)
