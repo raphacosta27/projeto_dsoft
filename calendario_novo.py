@@ -8,8 +8,11 @@
 
 from PyQt4 import QtCore, QtGui
 from abas import Ui_Form
+from firebase import firebase
+
 import sys
 
+firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 class Ui_Calendario(QtGui.QMainWindow):
     def __init__(self):
         super(Ui_Calendario, self).__init__()
@@ -1310,8 +1313,8 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.retranslateUi()
         QtCore.QMetaObject.connectSlotsByName(self)
 
-#        self.but_Seg.clicked.connect(self.gde1) #Aula GDE marcos lopes
-#        self.but_Seg_2.clicked.connect(self.modsim1) #Aula modsim 403
+        self.but_Seg.clicked.connect(self.GDESegundaClicked)
+        self.but_Seg_2.clicked.connect(self.MODSIMSegundaClicked)
 #        self.but_Seg_3.clicked.connect(self.adi_evento)
 #        self.but_Seg_4.clicked.connect(self.modsim2) #atendimento modsim 403
         self.but_Seg_5.clicked.connect(self.adi_evento)
@@ -1365,6 +1368,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_D_5.clicked.connect(self.adi_evento)
         self.but_D_6.clicked.connect(self.adi_evento)
         self.but_D_7.clicked.connect(self.adi_evento)
+        
 
     def retranslateUi(self):
         _translate = QtCore.QCoreApplication.translate
@@ -1472,6 +1476,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_Seg_2.setText(_translate("MainWindow", "MODSIM"))
         self.S1_Tipo.setTitle(_translate("MainWindow", "Aula"))
         self.but_Seg.setText(_translate("MainWindow", "GDE"))
+        
         self.S3_Tipo.setTitle(_translate("MainWindow", "Almoço"))
         self.but_Seg_3.setText(_translate("MainWindow", "-"))
         self.Qi2_Tipo.setTitle(_translate("MainWindow", "Tutoria"))
@@ -1487,6 +1492,45 @@ class Ui_Calendario(QtGui.QMainWindow):
     def adi_evento(self):
         self.novo_evento = Ui_Form()
         self.novo_evento.show()
+
+
+
+
+    def GDESegundaClicked (self):
+        self.novo_evento = Ui_Form()
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
+        self.novo_evento.input_abreviacao.setText("GDE")
+        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”.")
+        self.novo_evento.input_professor.setText("Fernando Ribeiro")
+        self.novo_evento.input_sobreprof.setText("Formado em Economia na Puc-SP")
+        self.novo_evento.lineEdit.setText("Segunda - Marcos Lopes, Quinta - 307" )
+        self.novo_evento.lineEdit_2.setText("Segunda - 2 º andar, Quinta - 3 º andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        
+        
+        self.novo_evento.show()
+        
+        
+    def BotaoSaveClicked (self):
+        self.loginAtual = DialogTest()
+        self.nome_do_evento = self.novo_evento.lineEdit_3.text()
+        self.data_do_evento = self.novo_evento.dateEdit.text()
+        firebase.put("/users/{0}".format(self.loginAtual))
+        print(self.nome_do_evento, self.data_do_evento)
+        
+    def MODSIMSegundaClicked (self):
+        self.novo_evento = Ui_Form()
+        self.novo_evento.input_materia.setText("Modelagem e Simulação do Mundo Físico")
+        self.novo_evento.input_abreviacao.setText("MODSIM")
+        self.novo_evento.input_sobremateria.setText("Por três vezes o ciclo de Modelagem e Simulação será percorrido de forma completa neste curso. Cada ciclo corresponderá a um projeto realizado pelos alunos. Os projetos serão realizados com grau crescente de autonomia por parte dos alunos. ")
+        self.novo_evento.input_professor.setText("Fábio Hage")
+        self.novo_evento.input_sobreprof.setText("Formado em Engenharia Elétrica na POLI - USP")
+        self.novo_evento.lineEdit.setText("Sala 403" )
+        self.novo_evento.lineEdit_2.setText("4 º andar")
+        self.novo_evento.show()
+        
+#    def INSTRUMEDTerçaClicked (self):
+
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)

@@ -70,12 +70,12 @@ class DialogTest(QtGui.QDialog):
         
 
     def tentativalogin (self):
-        user = self.lineEdit.text()
-        password = str(self.lineEdit_2.text())
-        dicionario = firebase.get("/users", "/{0}".format(user))        
+        self.user = self.lineEdit.text()
+        self.password = str(self.lineEdit_2.text())
+        self.dicionario = firebase.get("/users", "/{0}".format(self.user))        
         try: 
-           user == dicionario["name"]
-           if password == dicionario["password"]:
+           self.user == self.dicionario["name"]
+           if self.password == self.dicionario["password"]:
                 self.buttonBox.accepted.connect(self.OKClicked)
 
            else:

@@ -233,6 +233,7 @@ class Ui_Form(QtGui.QWidget):
         self.label_5.setText(_translate("Form", "Data"))
         self.dateEdit.setDisplayFormat(_translate("Form", "dd/MM"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aba_tpdo), _translate("Form", "To do"))
+      
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
