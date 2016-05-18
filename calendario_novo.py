@@ -10,7 +10,7 @@ from PyQt4 import QtCore, QtGui
 from firebase import firebase
 from abas import Ui_abas_calendario
 from add_event import Ui_aba_addevento
-import sys
+
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 class Ui_Calendario(QtGui.QMainWindow):
@@ -1498,7 +1498,7 @@ class Ui_Calendario(QtGui.QMainWindow):
     def BotaoSaveClicked (self):
         self.nome_do_evento = self.novo_evento.lineEdit_3.text()
         self.data_do_evento = self.novo_evento.dateEdit.text()
-#        firebase.put("/users/{0}".format(self.loginAtual))
+        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento})
         print(self.principal.login.user)
         print(self.nome_do_evento, self.data_do_evento)
         
