@@ -1498,9 +1498,13 @@ class Ui_Calendario(QtGui.QMainWindow):
     def BotaoSaveClicked (self):
         self.nome_do_evento = self.novo_evento.lineEdit_3.text()
         self.data_do_evento = self.novo_evento.dateEdit.text()
-        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento})
+        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento, 'numero' : QTableWidget.columnCount(self)})
         print(self.principal.login.user)
         print(self.nome_do_evento, self.data_do_evento)
+        self.tableWidget.setItem((QTableWidget.columnCount(self)),0, QTableWidgetItem(self.nome_do_evento))
+        self.tableWidget.setVerticalHeaderLabels(QString("V1;V2;V3;V4").split(";"))
+        self.tableWidget.setVerticalHeaderItem((self.data_do_evento), item)
+
         
     def GDESegundaClicked (self):
         self.novo_evento = Ui_abas_calendario()
@@ -1569,19 +1573,29 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit_2.setText("4º andar")
         self.novo_evento.show()
 
-
     def NATDESatClicked (self):
         self.novo_evento = Ui_abas_calendario()
         self.novo_evento.input_materia.setText("Natureza do Design")
         self.novo_evento.input_abreviacao.setText("NATDES")
         self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação),sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer (hands-on). Comunicar de forma gráfica não verbal, textual e oral.")    
-        self.novo_evento.input_professor.setText("Heloisa Neves, Roberto Fialho")
+        self.novo_evento.input_professor.setText("Heloisa Neves e Roberto Fialho")
         self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
-        self.novo_evento.lineEdit.setText("307")
-        self.novo_evento.lineEdit_2.setText("3º Andar")
+        self.novo_evento.lineEdit.setText("Fablab")
+        self.novo_evento.lineEdit_2.setText("4º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
         self.novo_evento.show()
 
+    def NATDESClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Natureza do Design")
+        self.novo_evento.input_abreviacao.setText("NATDES")
+        self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação),sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer (hands-on). Comunicar de forma gráfica não verbal, textual e oral.")    
+        self.novo_evento.input_professor.setText("Heloisa Neves e Roberto Fialho")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("Fablab")
+        self.novo_evento.lineEdit_2.setText("4º Andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        self.novo_evento.show()
 
     def GDETutClicked (self):
         self.novo_evento = Ui_abas_calendario()
