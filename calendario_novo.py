@@ -1574,19 +1574,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento = Ui_abas_calendario()
         self.novo_evento.input_materia.setText("Natureza do Design")
         self.novo_evento.input_abreviacao.setText("NATDES")
-        self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação), sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer(hands-on). Comunicar de forma gráfica não verbal, textual e oral.")
-        self.novo_evento.input_professor.setText("Heloisa Neves, Roberto Fialho")
-        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
-        self.novo_evento.lineEdit.setText("307")
-        self.novo_evento.lineEdit_2.setText("3º Andar")
-        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
-        self.novo_evento.show()
-
-    def NATDESClicked (self):
-        self.novo_evento = Ui_abas_calendario()
-        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
-        self.novo_evento.input_abreviacao.setText("GDE")
-        self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação), sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer(hands-on). Comunicar de forma gráfica não verbal, textual e oral.")
+        self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação),sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer (hands-on). Comunicar de forma gráfica não verbal, textual e oral.")    
         self.novo_evento.input_professor.setText("Heloisa Neves, Roberto Fialho")
         self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
         self.novo_evento.lineEdit.setText("307")
@@ -1597,10 +1585,10 @@ class Ui_Calendario(QtGui.QMainWindow):
 
     def GDETutClicked (self):
         self.novo_evento = Ui_abas_calendario()
-        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia - Tutoria")
         self.novo_evento.input_abreviacao.setText("GDE")
         self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
-        self.novo_evento.input_professor.setText("Fernando Ribeiro Leite Neto")
+        self.novo_evento.input_professor.setText("Sérgio Roberto Cardoso")
         self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
         self.novo_evento.lineEdit.setText("408")
         self.novo_evento.lineEdit_2.setText("4º Andar")
