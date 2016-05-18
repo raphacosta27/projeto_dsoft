@@ -1576,7 +1576,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.input_abreviacao.setText("NATDES")
         self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação),sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer (hands-on). Comunicar de forma gráfica não verbal, textual e oral.")    
         self.novo_evento.input_professor.setText("Heloisa Neves, Roberto Fialho")
-        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.input_sobreprof.setText("Doutora em Design e Arquitetura – USP, Doutor em Arquitetura e Urbanismo – USP")
         self.novo_evento.lineEdit.setText("307")
         self.novo_evento.lineEdit_2.setText("3º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
