@@ -14,8 +14,10 @@ import sys
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 class Ui_Calendario(QtGui.QMainWindow):
-    def __init__(self):
+    def __init__(self, janela_prin):
         super(Ui_Calendario, self).__init__()
+
+        self.principal = janela_prin
 
         self.setupUi()
     def setupUi(self):
@@ -1494,12 +1496,10 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.new_event.show()        
         
     def BotaoSaveClicked (self):
-        from Login import DialogTest
-        self.LoginAtual
         self.nome_do_evento = self.novo_evento.lineEdit_3.text()
         self.data_do_evento = self.novo_evento.dateEdit.text()
 #        firebase.put("/users/{0}".format(self.loginAtual))
-        print(self.Login.user)
+        print(self.principal.login.user)
         print(self.nome_do_evento, self.data_do_evento)
         
     def GDESegundaClicked (self):
@@ -1585,10 +1585,3 @@ class Ui_Calendario(QtGui.QMainWindow):
     def abas_calen(self):
         self.ver_evento = Ui_abas_calendario()
         self.ver_evento.show()
-
-
-if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
-    mainwindow = Ui_Calendario()
-    mainwindow.show()
-    sys.exit(app.exec_())

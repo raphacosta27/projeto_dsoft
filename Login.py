@@ -11,12 +11,12 @@ from firebase import firebase
 
 
 
-firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
-
 class DialogTest(QtGui.QDialog):
     def __init__(self):
         super(DialogTest, self).__init__()
-        
+
+        self.fb = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
+
         self.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowMinimizeButtonHint)
         
         self.setupUi()
@@ -73,12 +73,10 @@ class DialogTest(QtGui.QDialog):
     def tentativalogin (self):
         self.user = self.lineEdit.text()
         self.password = str(self.lineEdit_2.text())
-        self.dicionario = firebase.get("/users", "/{0}".format(self.user))        
+        self.dicionario = self.fb.get("/users", "/{0}".format(self.user))        
         try: 
-           self.user == self.dicionario["name"]
-           if self.password == self.dicionario["password"]:
+           if self.user == self.dicionario["name"] and self.password == self.dicionario["password"]:
                 self.buttonBox.accepted.connect(self.OKClicked)
-
            else:
               QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
         except TypeError:
@@ -93,7 +91,7 @@ class DialogTest(QtGui.QDialog):
         self.close()
         
     def OKClicked(self):
-        self.janela = Ui_MainWindow()
+        self.janela = Ui_MainWindow(self)
         self.janela.show()
 
 #    def SaveCalendarioClicked(self):
@@ -104,8 +102,8 @@ class DialogTest(QtGui.QDialog):
         
         
 
-# firebase.get("1","2") #Pegar do dicionario 2, dentro do dicionario 1
-# firebase.put("2", name="name", data="data") #Adicionar no dicionario, a chave name como valor data
+# fb.get("1","2") #Pegar do dicionario 2, dentro do dicionario 1
+# fb.put("2", name="name", data="data") #Adicionar no dicionario, a chave name como valor data
 
 
 if __name__ == "__main__":

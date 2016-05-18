@@ -14,8 +14,9 @@ from calendario_novo import Ui_Calendario
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
-    def __init__(self):
+    def __init__(self, tela_login):
         super(Ui_MainWindow, self).__init__()
+        self.login = tela_login
     
         
         self.setupUi()
@@ -143,7 +144,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.perfis = Ui_JanelPerfil()
         self.perfis.show()
     def CalendarioClicked(self):
-        self.calendario = Ui_Calendario()   
+        self.calendario = Ui_Calendario(self)   
         self.calendario.show()
 
 if __name__ == "__main__":
