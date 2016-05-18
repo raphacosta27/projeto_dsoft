@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-import sys
 
 class Ui_Servicos(QtGui.QWidget):
     def __init__ (self):
@@ -120,9 +119,3 @@ class Ui_Servicos(QtGui.QWidget):
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; text-decoration: underline;\">La Fiesta </span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt;\">R. Alvorada, 1951</span></p>\n"
 "<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
-
-if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
-    teste = Ui_Servicos()
-    teste.show()
-    sys.exit(app.exec_())

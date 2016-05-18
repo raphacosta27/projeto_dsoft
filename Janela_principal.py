@@ -7,7 +7,6 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-import sys
 from servicos import Ui_Servicos
 from perfil import Ui_JanelPerfil
 from calendario_novo import Ui_Calendario
@@ -146,10 +145,4 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def CalendarioClicked(self):
         self.calendario = Ui_Calendario(self)   
         self.calendario.show()
-
-if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
-    mainwindow = Ui_MainWindow()
-    mainwindow.show()
-    sys.exit(app.exec_())
 

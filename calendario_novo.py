@@ -10,7 +10,7 @@ from PyQt4 import QtCore, QtGui
 from firebase import firebase
 from abas import Ui_abas_calendario
 from add_event import Ui_aba_addevento
-import sys
+
 
 firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
 class Ui_Calendario(QtGui.QMainWindow):
@@ -359,10 +359,10 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_D_2.setObjectName("but_D_2")
         self.D_Labels_2.addWidget(self.but_D_2)
         self.verticalLayout_64.addLayout(self.D_Labels_2)
-        self.Grade_horario.addWidget(self.D2_Tipo, 4, 7, 1, 1)
+        self.Grade_horario.addWidget(self.D2_Tipo, 4, 7, 1, 1)f
         self.Label_Segunda = QtGui.QLabel(self.centralwidget)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(10)d
         font.setBold(True)
         font.setWeight(75)
         self.Label_Segunda.setFont(font)
@@ -1330,20 +1330,20 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_ter_5.clicked.connect(self.INSTRUMEDClicked) #aula instrumed 401
         self.but_ter_6.clicked.connect(self.adi_evento)
         self.but_ter_7.clicked.connect(self.adi_evento)
-#
+
         self.but_Qua.clicked.connect(self.DESOFTClicked) #aula desoft 403
-#        self.but_Qua_2.clicked.connect(self.gde2) #Atendimento GDE 403
+        self.but_Qua_2.clicked.connect(self.GDEatClicked) #Atendimento GDE 403
         self.but_Qua_3.clicked.connect(self.adi_evento) 
-#        self.but_Qua_4.clicked.connect(self.natureza) #aula natureza 403
-#        self.but_Qua_5.clicked.connect(self.natureza) #aula natureza 403
-#        self.but_Qua_6.clicked.connect(self.natureza3) #atendimento natureza 403
+        self.but_Qua_4.clicked.connect(self.NATDESClicked) #aula natureza 403
+        self.but_Qua_5.clicked.connect(self.NATDESClicked) #aula natureza 403
+        self.but_Qua_6.clicked.connect(self.NATDESatClicked) #atendimento natureza 403
         self.but_Qua_7.clicked.connect(self.adi_evento) 
 #
-#        self.but_Qui.clicked.connect(self.gde3) #aula gde 307
-#        self.but_Qui_2.clicked.connect(self.gde4) #tutoria gde 408
+        self.but_Qui.clicked.connect(self.GDEQuintaClicked) #aula gde 307
+        self.but_Qui_2.clicked.connect(self.GDETutClicked) #tutoria gde 408
         self.but_Qui_3.clicked.connect(self.adi_evento)
         self.but_Qui_4.clicked.connect(self.adi_evento)
-#        self.but_Qui_5.clicked.connect(self.modsim1)
+        self.but_Qui_5.clicked.connect(self.MODSIM1Clicked)
         self.but_Qui_6.clicked.connect(self.adi_evento)
         self.but_Qui_7.clicked.connect(self.adi_evento)
 #
@@ -1464,7 +1464,7 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_D_7.setText(_translate("MainWindow", "-"))
         self.Sa6_Tipo.setTitle(_translate("MainWindow", "Livre"))
         self.but_Sab_6.setText(_translate("MainWindow", "-"))
-        self.Sx2_Tipo.setTitle(_translate("MainWindow", "Aula"))
+        self.Sx2_Tipo.setTitle(_translate("MainiWndow", "Aula"))
         self.but_sex_2.setText(_translate("MainWindow", "MODSIM"))
         self.Sx1_Tipo.setTitle(_translate("MainWindow", "Aula"))
         self.but_sex.setText(_translate("MainWindow", "DESOFT"))
@@ -1498,7 +1498,7 @@ class Ui_Calendario(QtGui.QMainWindow):
     def BotaoSaveClicked (self):
         self.nome_do_evento = self.novo_evento.lineEdit_3.text()
         self.data_do_evento = self.novo_evento.dateEdit.text()
-#        firebase.put("/users/{0}".format(self.loginAtual))
+        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento})
         print(self.principal.login.user)
         print(self.nome_do_evento, self.data_do_evento)
         
@@ -1569,15 +1569,42 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit_2.setText("4º andar")
         self.novo_evento.show()
 
-    def MODSIM2Clicked (self):
+
+    def NATDESatClicked (self):
         self.novo_evento = Ui_abas_calendario()
-        self.novo_evento.input_materia.setText("Modelagem e Simulação do Mundo Físico")
-        self.novo_evento.input_abreviacao.setText("MODSIM")
-        self.novo_evento.input_sobremateria.setText("Por três vezes o ciclo de Modelagem e Simulação será percorrido de forma completa neste curso. Cada ciclo corresponderá a um projeto realizado pelos alunos. Os projetos serão realizados com grau crescente de autonomia por parte dos alunos. ")
-        self.novo_evento.input_professor.setText("Fábio Hage")
-        self.novo_evento.input_sobreprof.setText("Formado em Engenharia Elétrica na POLI - USP")
-        self.novo_evento.lineEdit.setText("Sala 403" )
-        self.novo_evento.lineEdit_2.setText("4 º andar")
+        self.novo_evento.input_materia.setText("Natureza do Design")
+        self.novo_evento.input_abreviacao.setText("NATDES")
+        self.novo_evento.input_sobremateria.setText("Vivenciar a experiência do projeto e suas fases (concepção, desenvolvimento, fabricação e validação),sempre tendo o usuário como foco central do problema e construindo um raciocínio crítico diante das especificidades de cada tema. Compreender o projeto enquanto processo de aprendizado pelo fazer (hands-on). Comunicar de forma gráfica não verbal, textual e oral.")    
+        self.novo_evento.input_professor.setText("Heloisa Neves, Roberto Fialho")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("307")
+        self.novo_evento.lineEdit_2.setText("3º Andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        self.novo_evento.show()
+
+
+    def GDETutClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia - Tutoria")
+        self.novo_evento.input_abreviacao.setText("GDE")
+        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
+        self.novo_evento.input_professor.setText("Sérgio Roberto Cardoso")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("408")
+        self.novo_evento.lineEdit_2.setText("4º Andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        self.novo_evento.show()
+
+    def GDEQuintaClicked (self):
+        self.novo_evento = Ui_abas_calendario()
+        self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
+        self.novo_evento.input_abreviacao.setText("GDE")
+        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
+        self.novo_evento.input_professor.setText("Fernando Ribeiro Leite Neto")
+        self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
+        self.novo_evento.lineEdit.setText("307")
+        self.novo_evento.lineEdit_2.setText("3º Andar")
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
         self.novo_evento.show()
         
 #    def INSTRUMEDTerçaClicked (self):
