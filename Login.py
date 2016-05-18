@@ -74,20 +74,22 @@ class DialogTest(QtGui.QDialog):
     def tentativalogin (self):
         self.user = self.lineEdit.text()
         self.password = str(self.lineEdit_2.text())
-        self.dicionario = self.fb.get("/users", "/{0}".format(self.user))        
-        try: 
-           if self.user == self.dicionario["name"] and self.password == self.dicionario["password"]:
-                self.buttonBox.accepted.connect(self.OKClicked)
-           else:
-              QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
-        except TypeError:
-            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
+        self.dicionario = self.fb.get("/users", "/{0}".format(self.user))
+        if not self.user:
+            QtGui.QMessageBox.warning(self, 'Erro de validação', 'Usuário faltando')
+        elif not self.password:
+            QtGui.QMessageBox.warning(self, 'Erro de validação', 'Senha faltando')
+        else:    
+            try: 
+               if self.user == self.dicionario["name"] and self.password == self.dicionario["password"]:
+                    self.buttonBox.accepted.connect(self.OKClicked)
+               else:
+                  QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
+            except TypeError:
+                QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
     
     def SalvarClicked(self):
         self.calendario = Ui_Calendario()
-        
-        
-              
                 
     def NovoUsuarioClicked(self):   
         self.window =  Ui_Dialog()
@@ -99,6 +101,7 @@ class DialogTest(QtGui.QDialog):
     def OKClicked(self):
         self.janela = Ui_MainWindow(self)
         self.janela.show()
+        self.close()
 
 #    def SaveCalendarioClicked(self):
 #        self.abas = Ui_abas_calendario()
