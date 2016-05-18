@@ -7,6 +7,7 @@ import sys
 from PyQt4 import QtGui, QtCore
 from NovoUsuario import Ui_Dialog
 from Janela_principal import Ui_MainWindow
+from calendario_novo import Ui_Calendario
 from firebase import firebase
 
 
@@ -80,7 +81,12 @@ class DialogTest(QtGui.QDialog):
            else:
               QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
         except TypeError:
-            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")    
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")
+    
+    def SalvarClicked(self):
+        self.calendario = Ui_Calendario()
+        
+        
               
                 
     def NovoUsuarioClicked(self):   
