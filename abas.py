@@ -214,7 +214,7 @@ class Ui_abas_calendario(QtGui.QWidget):
         self.label_3.setText(_translate("Form", "Imagem"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aba_sala), _translate("Form", "Sala"))
         item = self.tableWidget.verticalHeaderItem(0)
-        item.setText(_translate("Form", "13/05"))
+        item.setText(_translate("Form", "13/05")) #
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Nome"))
         __sortingEnabled = self.tableWidget.isSortingEnabled()
