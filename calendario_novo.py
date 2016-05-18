@@ -359,10 +359,10 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.but_D_2.setObjectName("but_D_2")
         self.D_Labels_2.addWidget(self.but_D_2)
         self.verticalLayout_64.addLayout(self.D_Labels_2)
-        self.Grade_horario.addWidget(self.D2_Tipo, 4, 7, 1, 1)f
+        self.Grade_horario.addWidget(self.D2_Tipo, 4, 7, 1, 1)
         self.Label_Segunda = QtGui.QLabel(self.centralwidget)
         font = QtGui.QFont()
-        font.setPointSize(10)d
+        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.Label_Segunda.setFont(font)
