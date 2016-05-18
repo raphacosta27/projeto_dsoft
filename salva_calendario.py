@@ -1,43 +1,62 @@
 # -*- coding: utf-8 -*-
-
-from PyQt4 import QtCore, QtGui
 from firebase import firebase
-from Calendario import Ui_Calendario
+from PyQt4 import QtCore, QtGui
+from calendario_novo import Ui_Calendario
 
-class SalvaCalendario :
-    def salvar (self):
-        self.calendario = Ui_Calendario()
-        
-        #pegando textos das labels
-        
-        #Descrição das aulas
-        self.segunda = self.calendario.S_Aula.text()
-        self.segunda2 = self.calendario.S_Aula_2.text()
-        self.segunda3 = self.calendario.S_Aula_3.text()
-        self.segunda4 = self.calendario.S_Aula_4.text()
-        self.segunda5 = self.calendario.S_Aula_5.text()
-        self.segunda6 = self.calendario.S_Aula_6.text()
-        self.segunda7 = self.calendario.S_Aula_7.text()
-        
-        self.terça = self.calendario.T_Aula.text()
-        self.terça2 = self.calendario.T_Aula2.text()
-        self.terça3 = self.calendario.T_Aula3.text()
-        self.terça4 = self.calendario.T_Aula4.text()
-        self.terça5 = self.calendario.T_Aula5.text()
-        self.terça6 = self.calendario.T_Aula6.text()
-        self.terça7 = self.calendario.T_Aula7.text()
-        
-        self.quarta = self.calendario.Q_Aula.text()
-        self.quarta2 = self.calendario.Q_Aula_2.text()
-        self.quarta3 = self.calendario.Q_Aula_3.text()
-        self.quarta4 = self.calendario.Q_Aula_4.text()
-        self.quarta5 = self.calendario.Q_Aula_5.text()
-        self.quarta6 = self.calendario.Q_Aula_6.text()
-        self.quarta7 = self.calendario.Q_Aula_7.text()
-        
-        self.quinta = self.calendario.Qi_Aula.text()
-        self.quinta2 = self.calendario.Qi_Aula_2.text()
+
+firebase = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
+
+class Banco_de_Dados:
+
+    def TentativaLogin(self, user, password, dicionario, botao):
+        try: 
+           self.user == self.dicionario["name"]
+           if self.password == self.dicionario["password"]:
+                self.login.buttonBox.accepted.connect(self.OKClicked)
+
+           else:
+              QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
+        except TypeError:
+            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")    
+    
+    
+    
+    
+#    def salvaCaendario(self):
+#        self.calendario = Ui_Calendario()
+#        self.login = DialogTest()
+#        print(self.)
         
         
-        
+
+
+
+
+
+
+
+#    def tentativalogin (self):
+#        self.user = self.lineEdit.text()
+#        self.password = str(self.lineEdit_2.text())
+#        self.dicionario = firebase.get("/users", "/{0}".format(self.user))        
+#        try: 
+#           self.user == self.dicionario["name"]
+#           if self.password == self.dicionario["password"]:
+#                self.buttonBox.accepted.connect(self.OKClicked)
+#
+#           else:
+#              QtGui.QMessageBox.warning(self, "Erro de validação", "Senha Inválida!")
+#        except TypeError:
+#            QtGui.QMessageBox.warning(self, "Erro de validação", "Usuario Inválido")    
+
+
+
+#    def BotaoSaveClicked (self):
+#        from Login import DialogTest
+#        self.Login = DialogTest()
+#        
+#        self.nome_do_evento = self.novo_evento.lineEdit_3.text()
+#        self.data_do_evento = self.novo_evento.dateEdit.text()
+##        firebase.put("/users/{0}".format(self.loginAtual))       
+#        print(self.nome_do_evento, self.data_do_evento, self.Login.lineEdit.text())
         

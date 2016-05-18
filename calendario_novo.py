@@ -1493,14 +1493,14 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.new_event = Ui_aba_addevento()
         self.new_event.show()        
         
-    def BotaoSaveClicked (self):
-        from Login import DialogTest
-        self.LoginAtual
-        self.nome_do_evento = self.novo_evento.lineEdit_3.text()
-        self.data_do_evento = self.novo_evento.dateEdit.text()
-#        firebase.put("/users/{0}".format(self.loginAtual))
-        print(self.Login.user)
-        print(self.nome_do_evento, self.data_do_evento)
+#    def BotaoSaveClicked (self):
+#        from Login import DialogTest
+#        self.Login = DialogTest()
+#        
+#        self.nome_do_evento = self.novo_evento.lineEdit_3.text()
+#        self.data_do_evento = self.novo_evento.dateEdit.text()
+#        firebase.put("/users/{0}".format(self.loginAtual))       
+#        print(self.nome_do_evento, self.data_do_evento, self.Login.lineEdit.text())
         
     def GDESegundaClicked (self):
         self.novo_evento = Ui_abas_calendario()
