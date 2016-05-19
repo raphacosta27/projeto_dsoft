@@ -1496,13 +1496,13 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.new_event.show()        
         
     def BotaoSaveClicked (self):
+        self.tableWidget = QtGui.QTableWidget()
         self.nome_do_evento = self.novo_evento.lineEdit_3.text()
         self.data_do_evento = self.novo_evento.dateEdit.text()
-        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento, 'numero' : QTableWidget.columnCount(self)})
+        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento, 'numero' : self.QTableWidget.columnCount()})
         print(self.principal.login.user)
         print(self.nome_do_evento, self.data_do_evento)
-        self.tableWidget.setItem((QTableWidget.columnCount(self)),0, QTableWidgetItem(self.nome_do_evento))
-        self.tableWidget.setVerticalHeaderLabels(QString("V1;V2;V3;V4").split(";"))
+        self.tableWidget.setItem((self.QTableWidget.columnCount()),0, QTableWidgetItem(self.nome_do_evento))
         self.tableWidget.setVerticalHeaderItem((self.data_do_evento), item)
 
         
