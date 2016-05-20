@@ -103,11 +103,6 @@ class DialogTest(QtGui.QDialog):
         self.janela.show()
         self.close()
 
-#    def SaveCalendarioClicked(self):
-#        self.abas = Ui_abas_calendario()
-#        self.nome_do_evento = self.abas.lineEdit_3.text()
-#        self.data_do_evento = self.abas.dateEdit.text()
-#        print(self.nome_do_evento, self.data_do_evento)
         
         
 

@@ -7,12 +7,12 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
-import sys
+
 
 class Ui_abas_calendario(QtGui.QWidget):
     def __init__ (self):
         super(Ui_abas_calendario, self).__init__()
-       
+        
         self.setupUi()
     def setupUi(self):
         self.setObjectName("Form")
@@ -137,8 +137,8 @@ class Ui_abas_calendario(QtGui.QWidget):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(1)
         self.tableWidget.setRowCount(20)
-        # item = QtGui.QTableWidgetItem()
-        # self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtGui.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
         item = QtGui.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(0, item)
         item = QtGui.QTableWidgetItem()
@@ -213,14 +213,14 @@ class Ui_abas_calendario(QtGui.QWidget):
         self.label_2.setText(_translate("Form", "Andar"))
         self.label_3.setText(_translate("Form", "Imagem"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aba_sala), _translate("Form", "Sala"))
-        # item = self.tableWidget.verticalHeaderItem(0)
-        # item.setText(_translate("Form", "13/05"))
+        item = self.tableWidget.verticalHeaderItem(0)
+        item.setText(_translate("Form", "13/05"))
         item = self.tableWidget.horizontalHeaderItem(0)
         item.setText(_translate("Form", "Nome"))
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
-        # item = self.tableWidget.item(0, 0)
-        # item.setText(_translate("Form", "Modsim"))
+        item = self.tableWidget.item(0, 0)
+        item.setText(_translate("Form", "Modsim"))
         self.tableWidget.setSortingEnabled(__sortingEnabled)
         self.label_6.setText(_translate("Form", "Adicionar um lembrete"))
         self.pushButton.setText(_translate("Form", "Salvar"))
@@ -230,8 +230,3 @@ class Ui_abas_calendario(QtGui.QWidget):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.aba_tpdo), _translate("Form", "To do"))
       
 
-if __name__ == "__main__":
-    app = QtGui.QApplication(sys.argv)
-    teste = Ui_abas_calendario()
-    teste.show()
-    sys.exit(app.exec_())

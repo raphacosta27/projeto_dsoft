@@ -1496,21 +1496,42 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.new_event.show()        
         
     def BotaoSaveClicked (self):
-        self.tableWidget = QtGui.QTableWidget()
-        self.nome_do_evento = self.novo_evento.lineEdit_3.text()
-        self.data_do_evento = self.novo_evento.dateEdit.text()
-        firebase.put("/users/{0}/eventos".format(self.principal.login.user), name = self.nome_do_evento, data = {'nome' : self.nome_do_evento, 'dia' : self.data_do_evento, 'numero' : self.QTableWidget.columnCount()})
-        print(self.principal.login.user)
-        print(self.nome_do_evento, self.data_do_evento)
-        self.tableWidget.setItem((self.QTableWidget.columnCount()),0, QTableWidgetItem(self.nome_do_evento))
-        self.tableWidget.setVerticalHeaderItem((self.data_do_evento), item)
+
+        _translate = QtCore.QCoreApplication.translate
+        nome_do_evento = self.novo_evento.lineEdit_3.text()
+        data_do_evento = self.novo_evento.dateEdit.text()
+        firebase.put("/users/{0}/eventos".format(self.principal.login.user), 
+                     name = nome_do_evento, 
+                     data = {'nome' : nome_do_evento, 'dia' : data_do_evento})
+                    
+        
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")        
+        print(dicieventos.values())
+        item = QtGui.QTableWidgetItem()
+        item.setText(_translate("Form", data_do_evento))
+        self.novo_evento.tableWidget.setVerticalHeaderItem(1, item)
+        
+        item = QtGui.QTableWidgetItem()
+        item.setText(_translate("Form", nome_do_evento))
+        self.novo_evento.tableWidget.setItem(1, 0, item)
+        
+
+         
+
+        
 
         
     def GDESegundaClicked (self):
         self.novo_evento = Ui_abas_calendario()
         self.novo_evento.input_materia.setText("Grandes Desafios da Engenharia")
         self.novo_evento.input_abreviacao.setText("GDE")
-        self.novo_evento.input_sobremateria.setText("O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” da produção tecnológica pois entende o desenvolvimento da técnica e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, a tecnologia e a inovação devem ser entendidas como “fatos sociais”. A partir desses parâmetros o curso permitirá que o engenheiro em formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).")
+        self.novo_evento.input_sobremateria.setText(
+            'O curso de Grandes Desafios da Engenharia problematiza a “neutralidade” ' +
+            'da produção tecnológica pois entende o desenvolvimento da técnica ' +
+            'e da tecnologia como dimensões da humanidade. Dessa forma, a ciência, ' +
+            'a tecnologia e a inovação devem ser entendidas como “fatos sociais”. ' +
+            'A partir desses parâmetros o curso permitirá que o engenheiro em ' +
+            'formação tenha contato com os métodos e os objetos de estudos de outra matriz científica que não a das ciências da natureza (ciências duras). Dessa forma, o treinamento do engenheiro lhe capacitará a dialogar com profissionais de outras formações ao longo de sua vida profissional. Além disso, o curso explorará as múltiplas relações que se colocam no trinômio ciência-tecnologia-sociedade. Ou seja, os caminhos pelos quais a ciência e a tecnologia pautam os desdobramentos dos fatos sociais (tecnolfilia) e, alternativamente, a forma como os fatos sociais moldam as escolhas tecnológicas (tecnofobia). Neste diapasão, a bibliografia sugerida trabalhará textos afeitos à filosofia, à economia, à sociologia e à própria engenharia (além, é claro, de textos que forneçam subsídios aos estudos dos temas sugeridos no primeiro módulo das tutorias, sobremaneira aqueles da esfera da linguística).')
         self.novo_evento.input_professor.setText("Fernando Ribeiro Leite Neto")
         self.novo_evento.input_sobreprof.setText("Possui graduação em Ciências Econômicas pela Pontifícia Universidade Católica de São Paulo (1999), mestrado em Economia Política (2002) e doutorado em Ciências Sociais (2010) pela mesma instituição. Atualmente é professor assistente mestre da Pontifícia Universidade Católica de São Paulo, professor assistente do Insper Instituto de Ensino e Pesquisa e sócio-consultor da Urbana Consultoria em Desenvolvimento Econômico e Social. Tem experiência na área de Economia, com ênfase em História do Pensamento Econômico, Economia Regional e Urbana e América Latina atuando principalmente nos seguintes temas: Período pré-clássico, atividade econômica regional e setor externo.")
         self.novo_evento.lineEdit.setText("Marcos Lopes" )
