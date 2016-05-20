@@ -16,7 +16,7 @@ class DialogTest(QtGui.QDialog):
     def __init__(self):
         super(DialogTest, self).__init__()
 
-        self.fb = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com")
+        self.fb = firebase.FirebaseApplication("https://integrator-51a9c.firebaseio.com/")
 
         self.setWindowFlags(QtCore.Qt.CustomizeWindowHint | QtCore.Qt.WindowMinimizeButtonHint)
         
