@@ -1496,24 +1496,25 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.new_event.show()        
         
     def BotaoSaveClicked (self):
+        
 
         _translate = QtCore.QCoreApplication.translate
+
         nome_do_evento = self.novo_evento.lineEdit_3.text()
         data_do_evento = self.novo_evento.dateEdit.text()
         firebase.put("/users/{0}/eventos".format(self.principal.login.user), 
                      name = nome_do_evento, 
-                     data = {'nome' : nome_do_evento, 'dia' : data_do_evento})
+                     data = data_do_evento)
                     
         
-        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")        
-        print(dicieventos.values())
+       
         item = QtGui.QTableWidgetItem()
         item.setText(_translate("Form", data_do_evento))
-        self.novo_evento.tableWidget.setVerticalHeaderItem(1, item)
+        self.novo_evento.tableWidget.setVerticalHeaderItem(len(self.listdatas), item)
         
         item = QtGui.QTableWidgetItem()
         item.setText(_translate("Form", nome_do_evento))
-        self.novo_evento.tableWidget.setItem(1, 0, item)
+        self.novo_evento.tableWidget.setItem(len(self.listevents), 0, item)
         
 
          
@@ -1537,6 +1538,26 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("Marcos Lopes" )
         self.novo_evento.lineEdit_2.setText("Segundo Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
+        
         self.novo_evento.show()
 
     def MODSIM1Clicked (self):
@@ -1549,6 +1570,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("403" )
         self.novo_evento.lineEdit_2.setText("4º andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
 
     def INSTRUMEDClicked (self):
@@ -1560,7 +1599,25 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.input_sobreprof.setText("Possui graduação em Engenharia Mecânica (Mecatrônica) pela Universidade de São Paulo / EESC - São Carlos (1999), mestrado em Engenharia Mecânica (Automação de Processos de Fabricação) pela Universidade de São Paulo / EESC - São Carlos (2002) e doutorado em Engenharia Mecânica (Automação de Processos de Fabricação) pela Universidade de São Paulo / EESC - São Carlos (2007). Atualmente é diretor da SENSOFT Indústria e Automação Ltda e professor do Centro Universitário de Araraquara (UNIARA). Tem experiência na área de Engenharia Mecânica, com ênfase em Automação de Processos de Fabricação, atuando principalmente nos seguintes temas: instrumentação, monitoramento, supervisão (SCADA), CNC de arquitetura aberta, controle de processos de fabricação.")
         self.novo_evento.lineEdit.setText("401" )
         self.novo_evento.lineEdit_2.setText("4º andar")
-        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)        
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)        
         self.novo_evento.show()
 
     def DESOFTatClicked (self):
@@ -1572,7 +1629,25 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.input_sobreprof.setText("Fábio Ayres é professor adjunto do Insper, envolvido no desenvolvimento dos cursos de engenharia. Possui graduação e mestrado em Engenharia Elétrica pela Escola Politécnica da USP e doutorado em Engenharia Elétrica pela University of Calgary, Canadá. Foi pós-doutorando em Engenharia Biomédica pela University of Calgary, pesquisador associado do National Research Council of Canada, engenheiro de software na Opal-RT Technologies, Canadá, e no Google. Interessa-se por visão computacional, aprendizado de máquina, processamento de imagens, recuperação de informação, computação de alto desempenho.")
         self.novo_evento.lineEdit.setText("Antônio Bandeira")
         self.novo_evento.lineEdit_2.setText("2º andar")
-        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)        
+        self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)        
         self.novo_evento.show()
 
     def DESOFTClicked (self):
@@ -1585,6 +1660,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("403")
         self.novo_evento.lineEdit_2.setText("4º andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
 
     def GDEatClicked (self):
@@ -1597,6 +1690,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("403" )
         self.novo_evento.lineEdit_2.setText("4º andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
 
     def NATDESatClicked (self):
@@ -1609,6 +1720,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("Fablab")
         self.novo_evento.lineEdit_2.setText("4º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
         
     def NATDESClicked (self):
@@ -1621,6 +1750,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("403")
         self.novo_evento.lineEdit_2.setText("4º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
 
     def GDETutClicked (self):
@@ -1633,6 +1780,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("408")
         self.novo_evento.lineEdit_2.setText("4º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
 
     def GDEQuintaClicked (self):
@@ -1645,6 +1810,24 @@ class Ui_Calendario(QtGui.QMainWindow):
         self.novo_evento.lineEdit.setText("307")
         self.novo_evento.lineEdit_2.setText("3º Andar")
         self.novo_evento.pushButton.clicked.connect(self.BotaoSaveClicked)
+        _translate = QtCore.QCoreApplication.translate
+        dicieventos = firebase.get("/users/{0}".format(self.principal.login.user), "/eventos")
+        self.listevents = []
+        self.listdatas = []            
+        for i, j in dicieventos.items():
+            self.listevents.append(i)
+            self.listdatas.append(j)
+        print(self.listevents)
+        
+        for r in range (len(self.listdatas)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listdatas[r]))
+            self.novo_evento.tableWidget.setVerticalHeaderItem(r, item)
+            
+        for p in range (len(self.listevents)):
+            item = QtGui.QTableWidgetItem()
+            item.setText(_translate("Form", self.listevents[p]))
+            self.novo_evento.tableWidget.setItem(p, 0, item)
         self.novo_evento.show()
         
 #    def INSTRUMEDTerçaClicked (self):
