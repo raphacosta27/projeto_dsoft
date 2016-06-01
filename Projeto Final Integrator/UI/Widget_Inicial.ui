@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Inicial</class>
+ <widget class="QWidget" name="Inicial">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Integrator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Imagens/img_icones/system_icon.png</normaloff>../Imagens/img_icones/system_icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QCommandLinkButton" name="botao_servicos">
+   <property name="geometry">
+    <rect>
+     <x>186</x>
+     <y>111</y>
+     <width>270</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaog - 269x135.png</normaloff>../Imagens/img_botoes/botaog - 269x135.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>42</width>
+     <height>42</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bg_inicial">
+   <property name="geometry">
+    <rect>
+     <x>-1</x>
+     <y>-1</y>
+     <width>643</width>
+     <height>483</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/tela_principal/Imagens/img_bg/background_telainicial.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_calendario">
+   <property name="geometry">
+    <rect>
+     <x>187</x>
+     <y>261</y>
+     <width>270</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaog - 269x135.png</normaloff>../Imagens/img_botoes/botaog - 269x135.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>42</width>
+     <height>42</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_infos">
+   <property name="geometry">
+    <rect>
+     <x>469</x>
+     <y>111</y>
+     <width>150</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaop - 150x135.png</normaloff>../Imagens/img_botoes/botaop - 150x135.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>42</width>
+     <height>42</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_usuarios">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>113</y>
+     <width>150</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaop - 150x135.png</normaloff>../Imagens/img_botoes/botaop - 150x135.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>42</width>
+     <height>42</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_editarperfil">
+   <property name="geometry">
+    <rect>
+     <x>21</x>
+     <y>261</y>
+     <width>150</width>
+     <height>135</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaop - 150x135.png</normaloff>../Imagens/img_botoes/botaop - 150x135.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>42</width>
+     <height>42</height>
+    </size>
+   </property>
+  </widget>
+  <zorder>bg_inicial</zorder>
+  <zorder>botao_servicos</zorder>
+  <zorder>botao_calendario</zorder>
+  <zorder>botao_infos</zorder>
+  <zorder>botao_usuarios</zorder>
+  <zorder>botao_editarperfil</zorder>
+ </widget>
+ <resources>
+  <include location="../QRC/tela_principal.qrc"/>
+ </resources>
+ <connections/>
+</ui>

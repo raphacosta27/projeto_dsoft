@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="tela_servicos_recomendados">
+    <file>../Imagens/img_bg/tela_servicos_recomendados.png</file>
+  </qresource>
+</RCC>

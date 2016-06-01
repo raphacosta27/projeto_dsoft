@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="tela_login">
+    <file>../Imagens/img_bg/background_telalogin.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget_calendario</class>
+ <widget class="QWidget" name="Widget_calendario">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Integrator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Imagens/img_icones/system_icon.png</normaloff>../Imagens/img_icones/system_icon.png</iconset>
+  </property>
+  <widget class="QLabel" name="bg_calendario">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/tela_calendario/Imagens/img_bg/tela_calendario.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Seg">
+   <property name="geometry">
+    <rect>
+     <x>53</x>
+     <y>24</y>
+     <width>86</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Seg_2">
+   <property name="geometry">
+    <rect>
+     <x>51</x>
+     <y>84</y>
+     <width>88</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Seg_4">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>201</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_ter_4">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>200</y>
+     <width>87</width>
+     <height>112</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_ter">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>23</y>
+     <width>87</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_ter_2">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>82</y>
+     <width>87</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qua">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>23</y>
+     <width>87</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qua_2">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>82</y>
+     <width>87</width>
+     <height>54</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qua_4">
+   <property name="geometry">
+    <rect>
+     <x>232</x>
+     <y>201</y>
+     <width>86</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qui">
+   <property name="geometry">
+    <rect>
+     <x>321</x>
+     <y>24</y>
+     <width>84</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qui_2">
+   <property name="geometry">
+    <rect>
+     <x>321</x>
+     <y>82</y>
+     <width>84</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_Qui_5">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>259</y>
+     <width>84</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_sex">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>24</y>
+     <width>84</width>
+     <height>55</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="but_sex_2">
+   <property name="geometry">
+    <rect>
+     <x>409</x>
+     <y>82</y>
+     <width>87</width>
+     <height>53</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="seg_3">
+   <property name="geometry">
+    <rect>
+     <x>51</x>
+     <y>143</y>
+     <width>88</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="seg_5">
+   <property name="geometry">
+    <rect>
+     <x>51</x>
+     <y>259</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="seg_6">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>319</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="seg_7">
+   <property name="geometry">
+    <rect>
+     <x>52</x>
+     <y>377</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ter_3">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>142</y>
+     <width>88</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ter_6">
+   <property name="geometry">
+    <rect>
+     <x>143</x>
+     <y>318</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ter_7">
+   <property name="geometry">
+    <rect>
+     <x>143</x>
+     <y>376</y>
+     <width>86</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qua_3">
+   <property name="geometry">
+    <rect>
+     <x>233</x>
+     <y>144</y>
+     <width>84</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qua_7">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>378</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qua_6">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>320</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qui_3">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>143</y>
+     <width>84</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qui_6">
+   <property name="geometry">
+    <rect>
+     <x>323</x>
+     <y>319</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qui_7">
+   <property name="geometry">
+    <rect>
+     <x>323</x>
+     <y>377</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Qui_4">
+   <property name="geometry">
+    <rect>
+     <x>322</x>
+     <y>201</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sex_6">
+   <property name="geometry">
+    <rect>
+     <x>412</x>
+     <y>320</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sex_3">
+   <property name="geometry">
+    <rect>
+     <x>411</x>
+     <y>144</y>
+     <width>84</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sex_4">
+   <property name="geometry">
+    <rect>
+     <x>411</x>
+     <y>202</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_1">
+   <property name="geometry">
+    <rect>
+     <x>502</x>
+     <y>26</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sex_5">
+   <property name="geometry">
+    <rect>
+     <x>411</x>
+     <y>258</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_salvar_calendario">
+   <property name="geometry">
+    <rect>
+     <x>524</x>
+     <y>437</y>
+     <width>106</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_voltar_calendario">
+   <property name="geometry">
+    <rect>
+     <x>6</x>
+     <y>436</y>
+     <width>92</width>
+     <height>39</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_2">
+   <property name="geometry">
+    <rect>
+     <x>501</x>
+     <y>81</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_3">
+   <property name="geometry">
+    <rect>
+     <x>501</x>
+     <y>142</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_4">
+   <property name="geometry">
+    <rect>
+     <x>501</x>
+     <y>201</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_5">
+   <property name="geometry">
+    <rect>
+     <x>501</x>
+     <y>259</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_6">
+   <property name="geometry">
+    <rect>
+     <x>501</x>
+     <y>319</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sab_7">
+   <property name="geometry">
+    <rect>
+     <x>502</x>
+     <y>378</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_1">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>25</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_2">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>83</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_3">
+   <property name="geometry">
+    <rect>
+     <x>568</x>
+     <y>142</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_4">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>201</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_5">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>262</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_6">
+   <property name="geometry">
+    <rect>
+     <x>569</x>
+     <y>317</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dom_7">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>378</y>
+     <width>62</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="sex_7">
+   <property name="geometry">
+    <rect>
+     <x>411</x>
+     <y>380</y>
+     <width>84</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse|Qt::TextBrowserInteraction|Qt::TextEditable|Qt::TextEditorInteraction|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+   </property>
+  </widget>
+  <zorder>bg_calendario</zorder>
+  <zorder>but_Seg</zorder>
+  <zorder>but_Seg_2</zorder>
+  <zorder>but_Seg_4</zorder>
+  <zorder>but_ter_4</zorder>
+  <zorder>but_ter</zorder>
+  <zorder>but_ter_2</zorder>
+  <zorder>but_Qua</zorder>
+  <zorder>but_Qua_2</zorder>
+  <zorder>but_Qua_4</zorder>
+  <zorder>but_Qui</zorder>
+  <zorder>but_Qui_2</zorder>
+  <zorder>but_Qui_5</zorder>
+  <zorder>but_sex</zorder>
+  <zorder>but_sex_2</zorder>
+  <zorder>seg_3</zorder>
+  <zorder>seg_6</zorder>
+  <zorder>seg_7</zorder>
+  <zorder>seg_5</zorder>
+  <zorder>ter_3</zorder>
+  <zorder>ter_6</zorder>
+  <zorder>ter_7</zorder>
+  <zorder>Qua_3</zorder>
+  <zorder>Qua_7</zorder>
+  <zorder>Qua_6</zorder>
+  <zorder>Qui_3</zorder>
+  <zorder>Qui_6</zorder>
+  <zorder>Qui_7</zorder>
+  <zorder>Qui_4</zorder>
+  <zorder>sex_6</zorder>
+  <zorder>sex_3</zorder>
+  <zorder>sex_4</zorder>
+  <zorder>sab_1</zorder>
+  <zorder>sex_5</zorder>
+  <zorder>botao_salvar_calendario</zorder>
+  <zorder>botao_voltar_calendario</zorder>
+  <zorder>sab_2</zorder>
+  <zorder>sab_3</zorder>
+  <zorder>sab_4</zorder>
+  <zorder>sab_5</zorder>
+  <zorder>sab_6</zorder>
+  <zorder>sab_7</zorder>
+  <zorder>dom_1</zorder>
+  <zorder>dom_2</zorder>
+  <zorder>dom_3</zorder>
+  <zorder>dom_4</zorder>
+  <zorder>dom_5</zorder>
+  <zorder>dom_6</zorder>
+  <zorder>dom_7</zorder>
+  <zorder>sex_7</zorder>
+ </widget>
+ <resources>
+  <include location="../QRC/tela_calendario.qrc"/>
+ </resources>
+ <connections/>
+</ui>

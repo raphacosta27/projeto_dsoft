@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="tela_editarperfil">
+    <file>../Imagens/img_bg/tela_editarperfil.png</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget_Cadastro</class>
+ <widget class="QWidget" name="Widget_Cadastro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>635</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cadastro</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Imagens/img_icones/system_icon.png</normaloff>../Imagens/img_icones/system_icon.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QLabel" name="bg_cadastro">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>-2</y>
+     <width>640</width>
+     <height>486</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/bg/Imagens/img_bg/tela_cadastro.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_snapchat">
+   <property name="geometry">
+    <rect>
+     <x>504</x>
+     <y>387</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_instagram">
+   <property name="geometry">
+    <rect>
+     <x>324</x>
+     <y>388</y>
+     <width>124</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_fb">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>389</y>
+     <width>216</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="combo_curso">
+   <property name="geometry">
+    <rect>
+     <x>68</x>
+     <y>180</y>
+     <width>352</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Administração</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Imagens/img_icones/adm.png</normaloff>../Imagens/img_icones/adm.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Economia</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Imagens/img_icones/eco.png</normaloff>../Imagens/img_icones/eco.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Engenharia da Computação</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Imagens/img_icones/comp.ico</normaloff>../Imagens/img_icones/comp.ico</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Engenharia Mecânica</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Imagens/img_icones/mec.png</normaloff>../Imagens/img_icones/mec.png</iconset>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Engenharia Mecatrônica</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Imagens/img_icones/meca.png</normaloff>../Imagens/img_icones/meca.png</iconset>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="combo_semestre">
+   <property name="geometry">
+    <rect>
+     <x>521</x>
+     <y>180</y>
+     <width>104</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAlphabetically</enum>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>5</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>7</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>9</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="input_nome">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>37</y>
+     <width>351</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="input_nasci">
+   <property name="geometry">
+    <rect>
+     <x>548</x>
+     <y>38</y>
+     <width>78</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="buttonSymbols">
+    <enum>QAbstractSpinBox::PlusMinus</enum>
+   </property>
+   <property name="date">
+    <date>
+     <year>1997</year>
+     <month>1</month>
+     <day>1</day>
+    </date>
+   </property>
+   <property name="maximumDateTime">
+    <datetime>
+     <hour>23</hour>
+     <minute>59</minute>
+     <second>59</second>
+     <year>2020</year>
+     <month>12</month>
+     <day>31</day>
+    </datetime>
+   </property>
+   <property name="minimumDateTime">
+    <datetime>
+     <hour>0</hour>
+     <minute>0</minute>
+     <second>0</second>
+     <year>1900</year>
+     <month>9</month>
+     <day>14</day>
+    </datetime>
+   </property>
+   <property name="currentSection">
+    <enum>QDateTimeEdit::DaySection</enum>
+   </property>
+   <property name="calendarPopup">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_newuser">
+   <property name="geometry">
+    <rect>
+     <x>82</x>
+     <y>85</y>
+     <width>116</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_newpw">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>86</y>
+     <width>103</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText</set>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>15</number>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_newpw_conf">
+   <property name="geometry">
+    <rect>
+     <x>521</x>
+     <y>85</y>
+     <width>103</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::WheelFocus</enum>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="maxLength">
+    <number>15</number>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_email">
+   <property name="geometry">
+    <rect>
+     <x>63</x>
+     <y>351</y>
+     <width>314</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_telefone">
+   <property name="geometry">
+    <rect>
+     <x>471</x>
+     <y>352</y>
+     <width>152</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="frame">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_atletica">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>238</y>
+     <width>150</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Atlética Insper</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_aisec">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>258</y>
+     <width>150</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>AISEC</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_bateria">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>278</y>
+     <width>150</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Bateria Imperial</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_bemgasto">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>298</y>
+     <width>150</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Bem gasto</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_designchallenge">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>258</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Design Challenge</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_da">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>278</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Diretório Acadêmico</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_infinance">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>238</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Infinance</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_junior">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>258</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Insper Junior</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_post">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>278</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Insper Post</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_ligaemp">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>298</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Liga de Empreendedores</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_consilium">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>238</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Consilium Insper</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_enactus">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>298</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Enactus</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_gas">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>318</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Grupo de Ação Social</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_sementes">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>318</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Myriad Pro</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sementes Culturais</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_fb">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>384</y>
+     <width>27</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Resources/botaoenviar - 42x42.png</normaloff>../Resources/botaoenviar - 42x42.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>27</width>
+     <height>27</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_cadastrar">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>564</x>
+     <y>412</y>
+     <width>66</width>
+     <height>65</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string notr="true"/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Resources/botao_cadastrar_act.png</normaloff>
+     <disabledoff>../Resources/botao_cadastrar_inac.png</disabledoff>../Resources/botao_cadastrar_act.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="description">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_voltar">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>437</y>
+     <width>91</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Resources/botaoenviar - 42x42.png</normaloff>../Resources/botaoenviar - 42x42.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>27</width>
+     <height>27</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>input_nome</tabstop>
+  <tabstop>input_nasci</tabstop>
+  <tabstop>input_newuser</tabstop>
+  <tabstop>input_newpw</tabstop>
+  <tabstop>input_newpw_conf</tabstop>
+  <tabstop>combo_curso</tabstop>
+  <tabstop>combo_semestre</tabstop>
+  <tabstop>check_atletica</tabstop>
+  <tabstop>check_aisec</tabstop>
+  <tabstop>check_bateria</tabstop>
+  <tabstop>check_bemgasto</tabstop>
+  <tabstop>check_consilium</tabstop>
+  <tabstop>check_designchallenge</tabstop>
+  <tabstop>check_da</tabstop>
+  <tabstop>check_enactus</tabstop>
+  <tabstop>check_gas</tabstop>
+  <tabstop>check_infinance</tabstop>
+  <tabstop>check_junior</tabstop>
+  <tabstop>botao_fb</tabstop>
+  <tabstop>check_post</tabstop>
+  <tabstop>check_ligaemp</tabstop>
+  <tabstop>check_sementes</tabstop>
+  <tabstop>input_email</tabstop>
+  <tabstop>input_telefone</tabstop>
+  <tabstop>input_fb</tabstop>
+  <tabstop>input_instagram</tabstop>
+  <tabstop>input_snapchat</tabstop>
+  <tabstop>botao_voltar</tabstop>
+  <tabstop>botao_cadastrar</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../QRC/tela_cadastro.qrc"/>
+ </resources>
+ <connections/>
+</ui>

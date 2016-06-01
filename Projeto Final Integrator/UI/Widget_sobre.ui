@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget_sobre</class>
+ <widget class="QWidget" name="Widget_sobre">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Integrator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Imagens/img_icones/system_icon.png</normaloff>../Imagens/img_icones/system_icon.png</iconset>
+  </property>
+  <widget class="QLabel" name="bg_tela_sobre">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/tela_sobre/Imagens/img_bg/tela_sobre.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_link_stackoverflow">
+   <property name="geometry">
+    <rect>
+     <x>323</x>
+     <y>268</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="botao_voltar_sobre">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>439</y>
+     <width>91</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</normaloff>../Imagens/img_botoes/botaoenviar - 42x42.png</iconset>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../QRC/tela_sobre.qrc"/>
+ </resources>
+ <connections/>
+</ui>
