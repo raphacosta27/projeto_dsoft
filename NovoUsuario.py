@@ -161,10 +161,12 @@ class Ui_Dialog(QtGui.QDialog):
         self.label_15 = QtGui.QLabel(self.groupBox)
         self.label_15.setGeometry(QtCore.QRect(370, 450, 101, 20))
         self.label_15.setObjectName("label_15")
+
         self.lineEdit_11 = QtGui.QLineEdit(self.groupBox)
         self.lineEdit_11.setGeometry(QtCore.QRect(480, 450, 113, 20))
         self.lineEdit_11.setEchoMode(QtGui.QLineEdit.Password)
         self.lineEdit_11.setObjectName("lineEdit_11")
+
         self.label_16 = QtGui.QLabel(self.groupBox)
         self.label_16.setGeometry(QtCore.QRect(10, 110, 131, 16))
         self.label_16.setObjectName("label_16")
@@ -225,9 +227,6 @@ class Ui_Dialog(QtGui.QDialog):
         
         
     def NovoUser(self):
-                
-        
-        
         self.new_user = self.lineEdit_9.text()
         self.new_password = self.lineEdit_10.text()
         

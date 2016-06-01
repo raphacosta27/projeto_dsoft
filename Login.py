@@ -33,12 +33,15 @@ class DialogTest(QtGui.QDialog):
         self.label = QtGui.QLabel(self.groupBox)
         self.label.setGeometry(QtCore.QRect(30, 20, 31, 16))
         self.label.setObjectName("label")
+
         self.lineEdit = QtGui.QLineEdit(self.groupBox)
         self.lineEdit.setGeometry(QtCore.QRect(70, 20, 113, 20))
         self.lineEdit.setObjectName("lineEdit")
+
         self.label_2 = QtGui.QLabel(self.groupBox)
         self.label_2.setGeometry(QtCore.QRect(30, 50, 31, 16))
         self.label_2.setObjectName("label_2")
+
         self.lineEdit_2 = QtGui.QLineEdit(self.groupBox)
         self.lineEdit_2.setGeometry(QtCore.QRect(70, 50, 113, 20))
         self.lineEdit_2.setFrame(True)
@@ -47,6 +50,7 @@ class DialogTest(QtGui.QDialog):
         self.lineEdit_2.setReadOnly(False)
         self.lineEdit_2.setCursorMoveStyle(QtCore.Qt.LogicalMoveStyle)
         self.lineEdit_2.setObjectName("lineEdit_2")
+
         self.buttonBox = QtGui.QDialogButtonBox(self.groupBox)
         self.buttonBox.setGeometry(QtCore.QRect(90, 110, 156, 23))
         self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
@@ -78,7 +82,7 @@ class DialogTest(QtGui.QDialog):
         if not self.user:
             QtGui.QMessageBox.warning(self, 'Erro de validação', 'Usuário faltando')
         elif not self.password:
-            QtGui.QMessageBox.warning(self, 'Erro de validação', 'Senha faltando')
+            QtGui.QMetaObjectQAzsageBox.warning(self, 'Erro de validação', 'Senha faltando')
         else:    
             try: 
                if self.user == self.dicionario["name"] and self.password == self.dicionario["password"]:
