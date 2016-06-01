@@ -1824,23 +1824,39 @@ class Widget_calendario(QtGui.QWidget):
     #     self.l_sab1 = self.sab_1.text()
     #     self.l_sab5 = self.sex_5.text()
     #     self.l_sab2 = self.sab_2.text()
-    #     self.l_sab2 = self.sab_3.text()
-    #     self.l_sab2 = self.sab_4.text()
-    #     self.l_sab2 = self.sab_5.text()
-    #     self.l_sab2 = self.sab_6.text()
-    #     self.l_sab2 = self.sab_7.text()
-    #     self.l_sab2 = self.dom_1.text()
-    #     self.l_sab2 = self.dom_2.text()
-    #     self.l_sab2 = self.dom_3.text()
-    #     self.l_sab2 = self.dom_4.text()
-    #     self.l_sab2 = self.dom_5.text()
-    #     self.l_sab2 = self.dom_6.text()
-    #     self.l_sab2 = self.dom_7.text()
-    #     self.l_sab2 = self.sex_7.text()
+    #     self.l_sab3 = self.sab_3.text()
+    #     self.l_sab4 = self.sab_4.text()
+    #     self.l_sab5 = self.sab_5.text()
+    #     self.l_sab6 = self.sab_6.text()
+    #     self.l_sab7 = self.sab_7.text()
+    #     self.l_dom1 = self.dom_1.text()
+    #     self.l_dom2 = self.dom_2.text()
+    #     self.l_dom3 = self.dom_3.text()
+    #     self.l_dom4 = self.dom_4.text()
+    #     self.l_dom5 = self.dom_5.text()
+    #     self.l_dom6 = self.dom_6.text()
+    #     self.l_dom7 = self.dom_7.text()
+    #     self.l_sex7 = self.sex_7.text()
     # 	pega o que ta escrito nas labels (gettext) e salva no fire botao_servicos
 
-    # def pegar_edicoes(self):
-    # 	pega o que esta no firebase e da settext nas labals
+    # def pegar_edicoes(self): modificar a funcao abaixo
+        # fb = firebase.FirebaseApplication("https://dsoftintegrator.firebaseio.com/")
+        # self.current_slot = self.select_user.currentText()
+        # self.current_name = fb.get("/users", "{0}".format(self.current_slot))
+        
+        # self.output_nome.setText(self.current_name["nome"])
+        # self.output_nascimento.setText(self.current_name["nascimento"])
+        # self.output_email.setText(self.current_name["email"])
+        # self.output_telefone.setText(self.current_name["telefone"])
+        # self.output_facebook.setText(self.current_name["facebook"])
+        # self.output_snapchat.setText(self.current_name["snapchat"])
+        # self.output_instagram.setText(self.current_name["instagram"])
+        # self.output_transporte.setText(self.current_name["transporte"])
+        # self.output_curso.setText(self.current_name["curso"])
+        # self.output_colegio.setText(self.current_name["colegio"])
+        # self.output_bairro.setText(self.current_name["bairro"])
+        # self.output_semestre.setText(self.current_name["semestre"])
+        
 
     def BotaoSaveClicked (self):
         _translate = QtCore.QCoreApplication.translate
